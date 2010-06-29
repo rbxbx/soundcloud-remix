@@ -5,8 +5,8 @@
   <%= f.error_messages %>
 
 	<%= f.hidden_field :user_id, :value => current_user["id"] %>
-
-  <p>Add Uploadify here...</p>
+	
+	<%= f.file_field :remix %>
 
   <p><%= f.submit 'Upload' %></p>
 
