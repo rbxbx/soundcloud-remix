@@ -1,12 +1,8 @@
 class RemixesController < ApplicationController
-  
-  require 'httparty'
 
   before_filter :login_required, :except => [:index, :show]
 
   def index
-
-    #puts HTTParty.get('http://api.soundcloud.com/tracks/3709934').code
 
     @remixes = Remix.all
 

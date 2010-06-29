@@ -1,14 +1,24 @@
 <% url = "http://api.soundcloud.com/tracks/#{@remix.track_id}" %>
 
+<% if @remix.available? %>
+
 <p>
 	
-<object height="81" width="100%"> 
-	<param name="movie" value="http://player.soundcloud.com/player.swf?url=<%= url -%>"></param> 
-	<param name="allowscriptaccess" value="always"></param> 
-	<embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=<%= url -%>" type="application/x-shockwave-flash" width="100%"></embed> 
-</object>
+	<object height="81" width="100%"> 
+		<param name="movie" value="http://player.soundcloud.com/player.swf?url=<%= url -%>"></param> 
+		<param name="allowscriptaccess" value="always"></param> 
+		<embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=<%= url -%>" type="application/x-shockwave-flash" width="100%"></embed> 
+	</object>
 
 </p>
+
+<% else %>
+
+	<p>Creating waveform</p>
+
+	<p><%= image_tag "throbber.gif" %></p>
+
+<% end %>
 
 <!--
 
