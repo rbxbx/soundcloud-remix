@@ -3,12 +3,14 @@ class RemixesController < ApplicationController
   before_filter :login_required, :except => [:index, :show]
 
   def index
+
     @remixes = Remix.all
 
     respond_to do |format|
       format.html
       #format.xml  { render :xml => @remixes }
     end
+    
   end
 
   def show
@@ -24,8 +26,6 @@ class RemixesController < ApplicationController
   end
 
   def create
-    
-    #puts params
 
     @remix = Remix.new(params[:remix])
 
@@ -33,16 +33,25 @@ class RemixesController < ApplicationController
       
       new_track = current_user.soundcloud.Track.new
       new_track.title = @remix.title
-      new_track.sharing = 'private'
       new_track.asset_data = @remix.asset_data
-      new_track.save
+      new_track.artwork_data = File.new("#{RAILS_ROOT}/public/images/cover.jpg")
+      new_track.description = "RJD2 Remix Competition Entry"
+      new_track.purchase_url = remix_url(@remix)
+      new_track.sharing = "public"
+      new_track.tag_list = "rjd2 remix competition"
+      new_track.track_type = "remix"
       
-      puts new_track.inspect
+      if new_track.save
+        
+        @remix.track_id = new_track.id
+        @remix.save
+        
+        current_user.token.put("/groups/10035/contributions/#{new_track.id}")
       
-      render :text => "testing"
-      
-      #flash[:notice] = 'Remix was successfully created.'
-      #redirect_to(@remix)
+        flash[:notice] = 'Remix was successfully created.'
+        redirect_to(@remix)
+        
+      end
       
     else
       render :action => "new"

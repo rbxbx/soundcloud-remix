@@ -1,11 +1,13 @@
-<p>
-  <b>User:</b>
-  <%=h @remix.user_id %>
-</p>
+<% url = "http://api.soundcloud.com/tracks/#{@remix.track_id}" %>
 
 <p>
-  <b>Track:</b>
-  <%=h @remix.track_id %>
+	
+<object height="81" width="100%"> 
+	<param name="movie" value="http://player.soundcloud.com/player.swf?url=<%= url -%>"></param> 
+	<param name="allowscriptaccess" value="always"></param> 
+	<embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=<%= url -%>" type="application/x-shockwave-flash" width="100%"></embed> 
+</object>
+
 </p>
 
 
