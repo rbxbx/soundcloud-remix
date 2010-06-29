@@ -1,6 +1,4 @@
 class RemixesController < ApplicationController
-  
-  upload_status_for :create
 
   before_filter :login_required, :except => [:index, :show]
 
