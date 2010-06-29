@@ -1,5 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  
   map.resources :remixes
+  
+  map.root :controller => "remixes"
 
   # The priority is based upon order of creation: first created -> highest priority.
 
