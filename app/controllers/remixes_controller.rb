@@ -25,7 +25,7 @@ class RemixesController < ApplicationController
 
   def create
     
-    puts "test"
+    puts params
     
     render :text => "testing"
     
