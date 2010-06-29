@@ -1,0 +1,13 @@
+<p>
+  <b>User:</b>
+  <%=h @remix.user_id %>
+</p>
+
+<p>
+  <b>Track:</b>
+  <%=h @remix.track_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_remix_path(@remix) %> |
+<%= link_to 'Back', remixes_path %>

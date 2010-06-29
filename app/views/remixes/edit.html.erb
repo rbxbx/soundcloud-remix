@@ -1,0 +1,20 @@
+<h1>Editing remix</h1>
+
+<% form_for(@remix) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :track_id %><br />
+    <%= f.text_field :track_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @remix %> |
+<%= link_to 'Back', remixes_path %>

@@ -1,0 +1,22 @@
+<h1>Listing remixes</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Track</th>
+  </tr>
+
+<% @remixes.each do |remix| %>
+  <tr>
+    <td><%=h remix.user_id %></td>
+    <td><%=h remix.track_id %></td>
+    <td><%= link_to 'Show', remix %></td>
+    <td><%= link_to 'Edit', edit_remix_path(remix) %></td>
+    <td><%= link_to 'Destroy', remix, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New remix', new_remix_path %>
