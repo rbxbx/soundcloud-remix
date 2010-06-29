@@ -15,7 +15,7 @@
 	
 	<% if logged_in? %>
 	
-	Logged in as <%= current_user.username %>, <%= link_to 'Logout', logout_path -%>
+	<%= link_to 'Logout', logout_path -%>
 	
 	<% end %>
 

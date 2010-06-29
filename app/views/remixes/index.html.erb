@@ -12,17 +12,8 @@
 
 <h2>Listen To & Vote On The Remixes</h2>
 
-<table>
-  <tr>
-    <th>User</th>
-    <th>Track</th>
-  </tr>
+<% for remix in @remixes %>
 
-<% @remixes.each do |remix| %>
-  <tr>
-    <td><%=h remix.user_id %></td>
-    <td><%=h remix.track_id %></td>
-    <td><%= link_to 'Show', remix %></td>
-  </tr>
+	<%= link_to remix.track_id, remix_path(remix.track_id) -%><br>
+
 <% end %>
-</table>
