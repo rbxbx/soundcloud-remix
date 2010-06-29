@@ -46,9 +46,9 @@ class RemixesController < ApplicationController
         @remix.track_id = new_track.id
         @remix.save
         
-        current_user.token.put("/groups/10035/contributions/#{new_track.id}")
+        puts current_user.token.put("/groups/10035/contributions/#{new_track.id}")
       
-        flash[:notice] = 'Remix was successfully created.'
+        flash[:notice] = 'Remix was successfully created. It will show up here once the waveform is created on SoundCloud.'
         redirect_to(@remix)
         
       end
