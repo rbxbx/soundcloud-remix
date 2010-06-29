@@ -25,21 +25,29 @@ class RemixesController < ApplicationController
 
   def create
     
-    puts params
-    
-    render :text => "testing"
-    
-=begin    
+    #puts params
+
     @remix = Remix.new(params[:remix])
 
     if @remix.save
-      flash[:notice] = 'Remix was successfully created.'
-      redirect_to(@remix)
+      
+      new_track = current_user.soundcloud.Track.new
+      new_track.title = @remix.title
+      new_track.sharing = 'private'
+      new_track.asset_data = @remix.asset_data
+      new_track.save
+      
+      puts new_track.inspect
+      
+      render :text => "testing"
+      
+      #flash[:notice] = 'Remix was successfully created.'
+      #redirect_to(@remix)
+      
     else
       render :action => "new"
     end
-=end    
-
+    
   end
 
 end
