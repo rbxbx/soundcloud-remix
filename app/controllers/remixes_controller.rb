@@ -25,6 +25,11 @@ class RemixesController < ApplicationController
 
   def create
     
+    puts "test"
+    
+    render :text => "testing"
+    
+=begin    
     @remix = Remix.new(params[:remix])
 
     if @remix.save
@@ -33,6 +38,7 @@ class RemixesController < ApplicationController
     else
       render :action => "new"
     end
+=end    
 
   end
 
