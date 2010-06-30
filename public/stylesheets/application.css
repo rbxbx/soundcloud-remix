@@ -4,7 +4,7 @@
 }
 
 body{
-	background-color: #292929;
+	background: #000 url('/images/bg.jpg') top center no-repeat fixed;
 	color: #999;
 	font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	font-size: 12px;

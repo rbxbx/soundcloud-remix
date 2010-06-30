@@ -13,16 +13,10 @@
 <body>
 	
 	<div id="wrapper">
-	
-		<div class="fl"><h1>RJD2 Remix Competition</h1></div>
+			
+		<%= image_tag "logo.png" -%>
 		
-		<div class="fr" style="margin-top:10px;">
-	
-			<% if logged_in? %>You're <%= current_user.username -%>, <%= link_to 'Sign out?', logout_path -%><% end %>
-		
-		</div>
-		
-		<div class="clear"></div>
+		<br>
 
 		<% if flash[:notice] %><div class="notice"><%= flash[:notice] %></div><% end %>
 
