@@ -11,8 +11,6 @@
 	
 	<p><%= f.file_field :asset_data %></p>
 
-  <p><%= f.submit 'Upload' %></p>
+  <p><%= f.submit 'Upload' %> <%= link_to 'Cancel', remixes_path %></p>
 
 <% end %>
-
-<%= link_to 'Back', remixes_path %>
