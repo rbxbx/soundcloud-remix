@@ -1,8 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :votes
-
   
-  map.resources :remixes
+  map.resources :remixes, :has_many => :votes
   
   map.root :controller => "remixes"
 
