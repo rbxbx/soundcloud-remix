@@ -61,7 +61,7 @@ h2{ color: #000; }
 	margin-bottom: 10px;
 }
 
-.block, .remix, .notice{ border-radius: 5px; }
+.block, .remix, .processing, .notice{ border-radius: 5px; }
 
 .fl{ float: left; }
 .fr{ float: right; }
