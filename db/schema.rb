@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100630000555) do
+ActiveRecord::Schema.define(:version => 20100630225914) do
 
   create_table "remixes", :force => true do |t|
     t.integer  "user_id"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(:version => 20100630000555) do
     t.string   "website"
     t.string   "full_name"
     t.integer  "followers_count"
-    t.string   "description"
+    t.text     "description",               :limit => 255
     t.string   "permalink_url"
     t.integer  "followings_count"
     t.integer  "track_count"
