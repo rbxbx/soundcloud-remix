@@ -1,7 +1,8 @@
 class VotesController < ApplicationController
 
   def create
-    @vote = Vote.new(params[:vote])
+    
+    @vote = Vote.new(:remix_id => params[:id], :ip_address => request.remote_ip)
 
     respond_to do |format|
       if @vote.save
@@ -13,6 +14,7 @@ class VotesController < ApplicationController
         format.xml  { render :xml => @vote.errors, :status => :unprocessable_entity }
       end
     end
+    
   end
   
 end
