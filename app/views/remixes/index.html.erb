@@ -1,3 +1,5 @@
+<div class="block">
+
 <h2>Remix On Aviary</h2>
 
 <p><%= link_to "launch aviary", "http://aviary.com/launch/myna?config=rjd2", :target => "_blank" -%></p>
@@ -14,9 +16,6 @@
 
 <p>Sorting / Options</p>
 
-<% for remix in @remixes %>
+</div>
 
-	<%= link_to remix.track_id, remix -%>
-	<%= link_to_remote "Vote", :url => vote_path(remix.id) -%><br>
-
-<% end %>
+<%= render @remixes %>
