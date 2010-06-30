@@ -13,13 +13,11 @@ class VotesController < ApplicationController
         
         flash[:notice] = 'Thanks for voting!'
         format.html { redirect_to @remix }
-        format.xml  { render :xml => @vote, :status => :created, :location => @vote }
         
       else
         
         flash[:notice] = 'You have already voted on this remix.'
         format.html { redirect_to @remix }
-        format.xml  { render :xml => @vote.errors, :status => :unprocessable_entity }
         
       end
       
