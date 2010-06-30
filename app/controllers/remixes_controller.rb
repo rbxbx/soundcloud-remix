@@ -35,7 +35,7 @@ class RemixesController < ApplicationController
       
       if new_track.save
         
-        new_track.purchase_url = remix_url(new_track.id)
+        new_track.purchase_url = vote_url(new_track.id)
         new_track.save
         
         @remix.track_id = new_track.id
