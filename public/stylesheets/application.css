@@ -3,7 +3,14 @@
 }
 
 body{
-	
+	background-color: #CCC;
+	text-align: center;
+}
+
+#wrapper{
+	margin: 0 auto;
+	text-align: left;
+	width: 800px;
 }
 
 .fl{ float: left; }
