@@ -9,19 +9,29 @@ class VotesController < ApplicationController
       
       if @vote.save
         
-        flash[:notice] = 'Thanks for voting!'
-        format.html { redirect_to @remix }
+        success = 'Thanks for voting!'
+                
+        format.html {
+          flash[:notice] = success
+          redirect_to @remix
+        }
         format.js{
-          
+          render :update do |page|
+            page.alert success
+          end
         }
         
       else
         
-        flash[:notice] = 'You have already voted on this remix.'
-        format.html { redirect_to @remix }
+        error = 'You have already voted on this remix.'
+        
+        format.html { 
+          flash[:notice] = error
+          redirect_to @remix
+        }
         format.js{
-          update_page do |page|
-            page.alert = flash[:notice]
+          render :update do |page|
+            page.alert error
           end
         }
         
