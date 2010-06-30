@@ -1,5 +1,5 @@
-<h2>Title: <%= @track["title"] -%></h2>
-<h3>By: <%= link_to @track["user"]["username"], @track["user"]["permalink_url"] -%></h3>
+<h2><%= @track["title"] -%></h2>
+<h3>By: <%= link_to @track["user"]["username"], @track["user"]["permalink_url"], :target => "_blank" -%></h3>
 <h3>Votes: <%= @remix.votes_count -%> <%= link_to "+", vote_path(params[:id]) -%></h3>
 
 <% options = "&color=E7AD14&show_playcount=true&show_comments=false&text_buy_track=Vote For My Remix" %>
@@ -29,5 +29,3 @@
 	<p><%= image_tag "throbber.gif" %></p>
 
 <% end %>
-
-<%= link_to 'Back', remixes_path %>
