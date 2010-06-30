@@ -1,10 +1,10 @@
 module RemixesHelper
   
-  def edit_remix_link
+  def edit_remix_link(remix, track)
     
     if logged_in? && (remix.user_id == current_user.id)
 
-      link_to("Edit", "#{@track["permalink_url"]}/edit", :target => "_blank")
+      link_to("edit", "#{track["permalink_url"]}/edit", :target => "_blank")
 
     end
     

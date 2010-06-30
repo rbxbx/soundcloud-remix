@@ -13,7 +13,7 @@
 		<h2><%= link_to track["title"], remix -%></h2>
 
 		Uploaded by <%= link_to track["user"]["username"], track["user"]["permalink_url"], :target => "_blank" -%> <%= time_ago_in_words track["created_at"] -%> ago
-		<%= edit_remix_link -%>
+		<%= edit_remix_link(remix, track) -%>
 
 	</div>
 
