@@ -1,6 +1,6 @@
 <% if @remix.available? %>
 
-<p>Votes: <%= @remix.votes_count %></p>
+<p><%= link_to "Vote", vote_path(params[:id]) -%>: <%= @remix.votes_count %></p>
 
 <p>
 	

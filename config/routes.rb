@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   
-  map.connect 'remixes/:id/vote', :controller => 'votes', :action => 'create'
+  map.vote 'remixes/:id/vote', :controller => 'votes', :action => 'create'
   
   map.resources :remixes
   
