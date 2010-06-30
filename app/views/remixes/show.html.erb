@@ -1,3 +1,5 @@
+<% options = "&color=E7AD14&show_playcount=true&show_comments=false&text_buy_track=Vote For My Remix" %>
+
 <% if @remix.available? %>
 
 <p><%= link_to "Vote", vote_path(params[:id]) -%>: <%= @remix.votes_count %></p>
@@ -5,9 +7,15 @@
 <p>
 	
 	<object height="81" width="100%"> 
-		<param name="movie" value="http://player.soundcloud.com/player.swf?url=<%= @track["uri"] -%>"></param> 
+		<param name="movie" value="http://player.soundcloud.com/player.swf?url=<%= @track["uri"] -%><%= options -%>"></param> 
 		<param name="allowscriptaccess" value="always"></param> 
-		<embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=<%= @track["uri"] -%>" type="application/x-shockwave-flash" width="100%"></embed> 
+		<embed 
+			allowscriptaccess="always" 
+			height="81" 
+			src="http://player.soundcloud.com/player.swf?url=<%= @track["uri"] -%><%= options -%>" 
+			type="application/x-shockwave-flash" 
+			width="100%">
+		</embed> 
 	</object>
 
 </p>
@@ -19,32 +27,5 @@
 	<p><%= image_tag "throbber.gif" %></p>
 
 <% end %>
-
-<!--
-
-color=(hex code without #, like 33ff00) color play button and other controls
-theme_color=(hex code without #, like 33ff00) color player background etc.
-auto_play=true/false
-show_artwork=true/false
-show_playcount=true/false
-show_bpm=true/false
-show_comments=true/false
-text_buy_track = string (e.g. ‘Tweet’ and it points to your ‘buy’ link)
-text_buy_set = string (e.g. ‘Tweet’ and it points to your ‘buy’ link)
-text_download_track = string (e.g. ‘Get it’ and it points to your ‘download’ link)
-buying = true/false (show hide buy buttons)
-sharing = true/false (show hide share buttons)
-download = true/false (show hide download buttons)
-show_bpm = true/false (show hide bpm display in player)
-show_playcount = true/false (show hide number of track plays)
-start_track = (a number from 0 to the playlist length) preselects a track in a playlist
-default_width = (a number e.g. 400) overrides the player’s autoscale, useful when embedding in other flash movies
-default_height = (a number e.g. 500) overrides the player’s autoscale, useful when embedding in other flash movies
-font = (a string e.g. Arial) overrides the default font with system font
-enable_api = true/false (enable JS api callbacks, please refer to http://wiki.github.com/soundcloud/Widget-JS-API/ for docs)
-single_active = true/false (if set to false the multiple players on the page won’t toggle each other off when playing)
-show_user = true/false (show or hide the uploader name, useful e.g. in tiny players to save space)
-
--->
 
 <%= link_to 'Back', remixes_path %>
