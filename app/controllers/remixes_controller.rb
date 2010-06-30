@@ -7,7 +7,7 @@ class RemixesController < ApplicationController
   end
 
   def show
-    @remix = Remix.find_by_track_id(params[:id])
+    @remix = Remix.find(params[:id])
     @track = @remix.track
   end
 
@@ -44,7 +44,7 @@ class RemixesController < ApplicationController
         puts current_user.token.put("/groups/10035/contributions/#{new_track.id}") # add to group
       
         flash[:notice] = 'Remix was successfully created. It will show up here once the waveform is created on SoundCloud.'
-        redirect_to remix_url(@remix.track_id)
+        redirect_to remix_url(@remix)
         
       end
       

@@ -8,10 +8,6 @@ class Remix < ActiveRecord::Base
   validates_presence_of :title
   validates_presence_of :asset_data
   
-  def to_param
-    track_id
-  end
-  
   def available?
     HTTParty.get("http://api.soundcloud.com/tracks/#{track_id}").code == 404 ? false : true
   end
