@@ -3,6 +3,7 @@ class Remix < ActiveRecord::Base
   attr_accessor :title, :asset_data
   
   belongs_to :user
+  has_many :votes
   
   validates_presence_of :title
   validates_presence_of :asset_data
