@@ -1,6 +1,8 @@
 <div class="block">
 
 	<h2>Upload Your Remix</h2>
+	
+	<p><% if logged_in? %>You're <%= current_user.username -%>, <%= link_to 'Sign out?', logout_path -%><% end %></p>
 
 	<% form_for(@remix, :html => {:multipart => true}) do |f| %>
 
@@ -11,7 +13,10 @@
 		<p><%= f.label :title, "Remix Title" %><br>
 		<%= f.text_field :title %></p>
 	
-		<p><%= f.file_field :asset_data %></p>
+		<p><%= f.label :asset_date, "File" %>
+		<%= f.file_field :asset_data %></p>
+		
+		<br>
 
 	  <p><%= f.submit 'Upload' %> <%= link_to 'Cancel', remixes_path %></p>
 
