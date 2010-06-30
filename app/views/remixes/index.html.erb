@@ -16,6 +16,7 @@
 
 <% for remix in @remixes %>
 
-	<%= link_to remix.track_id, remix -%><br>
+	<%= link_to remix.track_id, remix -%>
+	<%= link_to_remote "Vote", :url => vote_path(remix.id) -%><br>
 
 <% end %>
