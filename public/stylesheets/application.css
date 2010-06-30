@@ -1,16 +1,52 @@
 *{
-	
+	margin: 0;
+	padding: 0;
 }
 
 body{
-	background-color: #CCC;
+	background-color: #292929;
+	color: #999;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 14px;
+	padding: 40px 0 20px 0;
 	text-align: center;
+}
+
+a{
+	color: #b14647;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+h1{
+	color: #999;
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+
+h2{
+	color: #000;
 }
 
 #wrapper{
 	margin: 0 auto;
 	text-align: left;
-	width: 800px;
+	width: 700px;
+}
+
+.block, .remix{
+	background-color: #fff;
+	padding: 20px;
+	width: 100%;
+}
+
+.remix{ }
+
+.processing{
+	background-color: #000;
+	color: #FFF;
+	padding: 20px;
+	text-align: center;
 }
 
 .fl{ float: left; }

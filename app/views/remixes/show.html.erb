@@ -1,44 +1,18 @@
 <% if @remix.available? %>
 
-<h2><%= @track["title"] -%></h2>
-
-<div class="fl">
-	
-	Uploaded by <%= link_to @track["user"]["username"], @track["user"]["permalink_url"], :target => "_blank" -%> <%= time_ago_in_words @track["created_at"] -%> ago
-	<%= edit_remix_link -%>
-
-</div>
-
-<div class="fr">
-
-	Votes: <%= @remix.votes_count -%> <%= link_to "+", vote_path(params[:id]) -%>
-	Plays: <%= @track["playback_count"] -%>
-
-</div>
-
-<div class="clear"></div>
-
-<p>
-	
-	<% options = "&color=E7AD14&show_playcount=true&show_comments=false&text_buy_track=Vote For My Remix" %>
-	
-	<object height="81" width="100%"> 
-		<param name="movie" value="http://player.soundcloud.com/player.swf?url=<%= @track["uri"] -%><%= options -%>"></param> 
-		<param name="allowscriptaccess" value="always"></param> 
-		<embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=<%= @track["uri"] -%><%= options -%>" type="application/x-shockwave-flash" width="100%"></embed> 
-	</object>
-
-</p>
-
-<p>Sharing Options...</p>
+	<%= render @remix -%>
 
 <% else %>
 
-<div style="background-color:#000;text-align:center;color:#FFF;">
+	<div class="block">
 
-	Processing<br>
-	<%= image_tag "throbber.gif" %>
+		<div class="processing">
 
-</div>
+			Processing<br>
+			<%= image_tag "throbber.gif" %>
+
+		</div>
+	
+	</div>
 
 <% end %>

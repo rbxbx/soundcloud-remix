@@ -1,0 +1,41 @@
+<div class="remix">
+
+	<div class="fl" style="padding-right:10px;">
+
+		<%= image_tag @track["user"]["avatar_url"], :height => 50, :width => 50 %>
+
+	</div>
+
+	<div class="fl">
+
+		<h2><%= @track["title"] -%></h2>
+
+		Uploaded by <%= link_to @track["user"]["username"], @track["user"]["permalink_url"], :target => "_blank" -%> <%= time_ago_in_words @track["created_at"] -%> ago
+		<%= edit_remix_link -%>
+
+	</div>
+
+	<div class="fr" style="text-align:right;">
+
+		<h2><%= link_to_remote "Vote For This Remix", :url => vote_path(@remix.id) -%></h2>
+
+		<%= pluralize @track["playback_count"], 'play' -%> | 
+		<%= pluralize @remix.votes_count, 'vote' -%>
+
+	</div>
+
+	<div class="clear"></div>
+
+	<div style="margin-top:10px;">
+
+		<% options = "&color=E7AD14&show_playcount=true&show_comments=false&text_buy_track=Vote For My Remix" %>
+
+		<object height="81" width="100%"> 
+			<param name="movie" value="http://player.soundcloud.com/player.swf?url=<%= @track["uri"] -%><%= options -%>"></param> 
+			<param name="allowscriptaccess" value="always"></param> 
+			<embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=<%= @track["uri"] -%><%= options -%>" type="application/x-shockwave-flash" width="100%"></embed> 
+		</object>
+
+	</div>
+
+</div>
