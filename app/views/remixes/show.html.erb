@@ -1,10 +1,22 @@
 <% if @remix.available? %>
 
 <h2><%= @track["title"] -%></h2>
-<h3>Uploaded by <%= link_to @track["user"]["username"], @track["user"]["permalink_url"], :target => "_blank" -%> <%= time_ago_in_words @track["created_at"] -%> ago</h3>
 
-<p>Votes: <%= @remix.votes_count -%> <%= link_to "+", vote_path(params[:id]) -%></p>
-<p><%= edit_remix_link -%></p>
+<div class="fl">
+	
+	Uploaded by <%= link_to @track["user"]["username"], @track["user"]["permalink_url"], :target => "_blank" -%> <%= time_ago_in_words @track["created_at"] -%> ago
+	<%= edit_remix_link -%>
+
+</div>
+
+<div class="fr">
+
+	Votes: <%= @remix.votes_count -%> <%= link_to "+", vote_path(params[:id]) -%>
+	Plays: <%= @track["playback_count"] -%>
+
+</div>
+
+<div class="clear"></div>
 
 <p>
 	
