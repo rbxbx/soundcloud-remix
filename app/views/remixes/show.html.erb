@@ -2,6 +2,8 @@
 <h3>By: <%= link_to @track["user"]["username"], @track["user"]["permalink_url"], :target => "_blank" -%></h3>
 <h3>Votes: <%= @remix.votes_count -%> <%= link_to "+", vote_path(params[:id]) -%></h3>
 
+<%= edit_remix_link -%>
+
 <% if @remix.available? %>
 
 <p>
