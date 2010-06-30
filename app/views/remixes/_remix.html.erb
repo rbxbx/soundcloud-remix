@@ -16,8 +16,16 @@
 	</div>
 
 	<div class="fr" style="text-align:right;">
+		
+		<% if @remix.voted?(request.remote_ip) %>
+		
+		<h2>&nbsp;</h2>
+		
+		<% else %>
 
 		<h2><%= link_to_remote "Vote For This Remix", :url => vote_path(@remix.id) -%></h2>
+		
+		<% end %>
 
 		<%= pluralize @track["playback_count"], 'play' -%> | 
 		<%= pluralize @remix.votes_count, 'vote' -%>

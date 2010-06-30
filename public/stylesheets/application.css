@@ -37,7 +37,7 @@ h2{
 .block, .remix{
 	background-color: #fff;
 	padding: 20px;
-	width: 100%;
+	/*width: 100%;*/
 }
 
 .remix{ }
@@ -47,6 +47,13 @@ h2{
 	color: #FFF;
 	padding: 20px;
 	text-align: center;
+}
+
+.notice{
+	border: 2px solid #CCC;
+	color: #FFF;
+	padding: 10px 20px;
+	margin-bottom: 10px;
 }
 
 .fl{ float: left; }
