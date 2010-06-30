@@ -2,7 +2,7 @@
 
 	<div class="fl" style="padding-right:10px;">
 
-		<%= image_tag @track["user"]["avatar_url"], :height => 50, :width => 50 %>
+		<%= image_tag @track["user"]["avatar_url"], :height => 40, :width => 40 %>
 
 	</div>
 
@@ -19,11 +19,11 @@
 		
 		<% if @remix.voted?(request.remote_ip) %>
 		
-		<h2>&nbsp;</h2>
+			<h2>&nbsp;</h2>
 		
 		<% else %>
 
-		<h2><%= link_to_remote "Vote For This Remix", :url => vote_path(@remix.id) -%></h2>
+			<h2><%= link_to_remote "Vote For This Remix", :url => vote_path(@remix.id) -%></h2>
 		
 		<% end %>
 
@@ -34,7 +34,7 @@
 
 	<div class="clear"></div>
 
-	<div style="margin-top:10px;">
+	<div class="player">
 
 		<% options = "&color=E7AD14&show_playcount=true&show_comments=false&text_buy_track=Vote For My Remix" %>
 

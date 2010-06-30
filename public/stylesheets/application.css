@@ -7,7 +7,7 @@ body{
 	background-color: #292929;
 	color: #999;
 	font-family: 'Helvetica Neue', Helvetica, sans-serif;
-	font-size: 14px;
+	font-size: 12px;
 	padding: 40px 0 20px 0;
 	text-align: center;
 }
@@ -31,16 +31,20 @@ h2{
 #wrapper{
 	margin: 0 auto;
 	text-align: left;
-	width: 700px;
+	width: 650px;
 }
 
 .block, .remix{
 	background-color: #fff;
 	padding: 20px;
-	/*width: 100%;*/
 }
 
 .remix{ }
+
+.player{
+	margin-top: 10px;
+	-webkit-box-shadow: #ebebeb 0px 3px 7px;
+}
 
 .processing{
 	background-color: #000;
@@ -55,6 +59,8 @@ h2{
 	padding: 10px 20px;
 	margin-bottom: 10px;
 }
+
+.block, .remix, .notice{ border-radius: 5px; }
 
 .fl{ float: left; }
 .fr{ float: right; }
