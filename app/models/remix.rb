@@ -17,7 +17,7 @@ class Remix < ActiveRecord::Base
   end
   
   def track
-    HTTParty.get("http://api.soundcloud.com/tracks/#{track_id}")
+    HTTParty.get("http://api.soundcloud.com/tracks/#{track_id}")["track"]
   end
   
 end

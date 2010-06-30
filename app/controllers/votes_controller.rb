@@ -17,6 +17,7 @@ class VotesController < ApplicationController
         
       else
         
+        flash[:notice] = 'You have already voted on this remix.'
         format.html { redirect_to remix_path(params[:id]) }
         format.xml  { render :xml => @vote.errors, :status => :unprocessable_entity }
         

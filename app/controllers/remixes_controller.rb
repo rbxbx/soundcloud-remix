@@ -8,6 +8,7 @@ class RemixesController < ApplicationController
 
   def show
     @remix = Remix.find_by_track_id(params[:id])
+    @track = @remix.track
   end
 
   def new
