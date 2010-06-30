@@ -1,16 +1,20 @@
-<h2>Upload Your Remix</h2>
+<div class="block">
 
-<% form_for(@remix, :html => {:multipart => true}) do |f| %>
+	<h2>Upload Your Remix</h2>
 
-  <%= f.error_messages %>
+	<% form_for(@remix, :html => {:multipart => true}) do |f| %>
 
-	<%= f.hidden_field :user_id, :value => current_user["id"] %>
+	  <%= f.error_messages %>
+
+		<%= f.hidden_field :user_id, :value => current_user["id"] %>
 	
-	<p><%= f.label :title, "Remix Title" %><br>
-	<%= f.text_field :title %></p>
+		<p><%= f.label :title, "Remix Title" %><br>
+		<%= f.text_field :title %></p>
 	
-	<p><%= f.file_field :asset_data %></p>
+		<p><%= f.file_field :asset_data %></p>
 
-  <p><%= f.submit 'Upload' %> <%= link_to 'Cancel', remixes_path %></p>
+	  <p><%= f.submit 'Upload' %> <%= link_to 'Cancel', remixes_path %></p>
 
-<% end %>
+	<% end %>
+
+</div>

@@ -18,6 +18,8 @@ a{
 	text-decoration: none;
 }
 
+p{ margin: 10px 0; }
+
 h1{
 	color: #999;
 	font-weight: normal;
