@@ -55,6 +55,7 @@ h2{ color: #000; }
 }
 
 .notice{
+	background-color: #000;
 	border: 2px solid #CCC;
 	color: #FFF;
 	padding: 10px 20px;
