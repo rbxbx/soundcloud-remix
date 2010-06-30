@@ -9,13 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100629154628) do
+ActiveRecord::Schema.define(:version => 20100630000555) do
 
   create_table "remixes", :force => true do |t|
     t.integer  "user_id"
     t.integer  "track_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "votes_count", :default => 0
   end
 
   create_table "users", :force => true do |t|
@@ -41,6 +42,13 @@ ActiveRecord::Schema.define(:version => 20100629154628) do
     t.integer  "followings_count"
     t.integer  "track_count"
     t.string   "myspace_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "votes", :force => true do |t|
+    t.integer  "remix_id"
+    t.string   "ip_address"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
