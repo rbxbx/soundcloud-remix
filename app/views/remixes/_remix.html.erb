@@ -32,7 +32,7 @@
 
 	<div class="clear"></div>
 	
-	<% if params[:action] == "show" && remix.available? %>
+	<% if params[:action] == "show" && !remix.available? %>
 
 		<div class="processing">
 
