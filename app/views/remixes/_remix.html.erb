@@ -32,7 +32,16 @@
 
 	<div class="clear"></div>
 	
-	<% if remix.available? %>
+	<% if params[:action] == "show" && remix.available? %>
+
+		<div class="processing">
+
+			Processing<br>
+			<%= image_tag "throbber.gif" %>
+
+		</div>
+		
+	<% else %>
 
 		<div class="player">
 
@@ -41,19 +50,6 @@
 				<param name="allowscriptaccess" value="always"></param> 
 				<embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=<%= remix.url -%>" type="application/x-shockwave-flash" width="100%"></embed> 
 			</object>
-
-		</div>
-
-	<% else %>
-
-		<div class="block">
-
-			<div class="processing">
-
-				Processing<br>
-				<%= image_tag "throbber.gif" %>
-
-			</div>
 
 		</div>
 
