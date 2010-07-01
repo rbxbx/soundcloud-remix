@@ -34,7 +34,7 @@ h2{ color: #000; }
 	width: 650px;
 }
 
-.block, .remix{
+.block, .remix, .pagination{
 	background-color: #fff;
 	margin-bottom: 10px;
 	padding: 20px;
@@ -61,7 +61,7 @@ h2{ color: #000; }
 	margin-bottom: 10px;
 }
 
-.block, .remix, .processing, .notice{ border-radius: 5px; }
+.block, .remix, .processing, .notice, .pagination{ border-radius: 5px; }
 
 .fl{ float: left; }
 .fr{ float: right; }
