@@ -14,15 +14,8 @@
 	<meta property="og:site_name" content="RJD2 Remix Contest" />
 	<meta property="fb:admins" content="23424322"/>	
 	
-	<% if params[:action] == "index" %>
+	<% if params[:action] == "show" %>
 
-	<meta property="og:title" content="RJD2 Remix Contest"/> 
-  <meta property="og:type" content="website"/> 
-  <meta property="og:url" content="<%= root_url -%>"/> 
-  <meta property="og:image" content="<%= root_url -%>images/cover.jpg" />
-
-	<% else %>
-	
 	<meta content="<%= @remix.title -%>" name="title" /> 
 	<meta content="video" name="medium" /> 
 	<link href="http://player.soundcloud.com/player.swf?url=<%= @remix.url -%>" rel="video_src" /> 
@@ -34,6 +27,13 @@
 	<meta property="og:title" content="<%= @remix.title -%>" /> 
   <meta property="og:type" content="song" /> 
   <meta property="og:url" content="<%= remix_url(@remix) -%>" /> 
+  <meta property="og:image" content="<%= root_url -%>images/cover.jpg" />
+
+	<% else %>
+	
+	<meta property="og:title" content="RJD2 Remix Contest"/> 
+  <meta property="og:type" content="website"/> 
+  <meta property="og:url" content="<%= root_url -%>"/> 
   <meta property="og:image" content="<%= root_url -%>images/cover.jpg" />
 	
 	<% end %>
