@@ -31,17 +31,32 @@
 	</div>
 
 	<div class="clear"></div>
+	
+	<% if remix.available? %>
 
-	<div class="player">
+		<div class="player">
 
-		<% url = "http://api.soundcloud.com/tracks/#{remix.track_id}&color=E7AD14&show_playcount=true&show_comments=false&text_buy_track=Vote For My Remix" %>
+			<object height="81" width="100%"> 
+				<param name="movie" value="http://player.soundcloud.com/player.swf?url=<%= remix.url -%>"></param> 
+				<param name="allowscriptaccess" value="always"></param> 
+				<embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=<%= remix.url -%>" type="application/x-shockwave-flash" width="100%"></embed> 
+			</object>
 
-		<object height="81" width="100%"> 
-			<param name="movie" value="http://player.soundcloud.com/player.swf?url=<%= url -%>"></param> 
-			<param name="allowscriptaccess" value="always"></param> 
-			<embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=<%= url -%>" type="application/x-shockwave-flash" width="100%"></embed> 
-		</object>
+		</div>
 
-	</div>
+	<% else %>
+
+		<div class="block">
+
+			<div class="processing">
+
+				Processing<br>
+				<%= image_tag "throbber.gif" %>
+
+			</div>
+
+		</div>
+
+	<% end %>
 
 </div>
