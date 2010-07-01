@@ -8,6 +8,9 @@ class Remix < ActiveRecord::Base
   validates_presence_of :title
   validates_presence_of :asset_data
   
+  cattr_reader :per_page
+  @@per_page = 5
+  
   def url
     "http://api.soundcloud.com/tracks/#{track_id}&color=E7AD14&show_playcount=true&show_comments=false&text_buy_track=Vote For My Remix"
   end

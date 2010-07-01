@@ -1,21 +1,31 @@
 <div class="block">
 
-<h2>Remix On Aviary</h2>
+	<h2>Remix On Aviary</h2>
 
-<p><%= link_to "launch aviary", "http://aviary.com/launch/myna?config=rjd2", :target => "_blank" -%></p>
-
-<h2>Upload Your Remix</h2>
-
-<p>
+	<p>
 	
-	<%= link_to 'upload your remix', new_remix_path %>
-	
-</p>
+		<%= link_to "launch aviary", "http://aviary.com/launch/myna?config=rjd2", :target => "_blank" -%>
+		
+	</p>
 
-<h2>Listen To & Vote On The Remixes</h2>
+	<h2>Upload Your Remix</h2>
 
-<p>Sorting / Options</p>
+	<p>
+
+		<%= link_to 'upload your remix', new_remix_path %>
+
+	</p>
+
+	<h2>Listen To & Vote On The Remixes</h2>
+
+	<p>Sorting / Options</p>
 
 </div>
 
 <%= render @remixes %>
+
+<div class="block">
+	
+	<%= will_paginate @remixes %>
+	
+</div>
