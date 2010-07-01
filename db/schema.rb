@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100630225914) do
+ActiveRecord::Schema.define(:version => 20100701151912) do
 
   create_table "remixes", :force => true do |t|
     t.integer  "user_id"
@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 20100630225914) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "votes_count", :default => 0
+    t.string   "title"
   end
 
   create_table "users", :force => true do |t|

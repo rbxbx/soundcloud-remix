@@ -1,6 +1,6 @@
 class Remix < ActiveRecord::Base
   
-  attr_accessor :title, :asset_data
+  attr_accessor :asset_data
   
   belongs_to :user
   has_many :votes
