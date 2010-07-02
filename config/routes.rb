@@ -4,6 +4,8 @@ ActionController::Routing::Routes.draw do |map|
   
   map.status 'remixes/:id/status', :controller => 'remixes', :action => 'status'
   
+  map.upload 'upload', :controller => 'remixes', :action => 'new'
+  
   map.popular 'remixes/popular', :controller => 'remixes', :action => 'index', :sort => "votes_count DESC"
   
   map.resources :remixes
