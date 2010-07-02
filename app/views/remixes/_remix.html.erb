@@ -16,9 +16,9 @@
 
 	<div class="fr" style="text-align:right;">
 		
-		<h2><%= remix.voted?(request.remote_ip) ? "&nbsp;" : link_to_remote("Vote", :url => vote_path(remix.id)) %></h2>
+		<h2 id="vote_link_<%= remix.id -%>"><%= remix.voted?(request.remote_ip) ? "&nbsp;" : link_to_remote("Vote", :url => vote_path(remix.id)) %></h2>
 
-		<%= pluralize remix.votes_count, 'vote' -%>
+		<span id="vote_count_<%= remix.id -%>"><%= pluralize remix.votes_count, 'vote' -%></span>
 
 	</div>
 

@@ -8,16 +8,15 @@ class VotesController < ApplicationController
     respond_to do |format|
       
       if @vote.save
-        
-        success = 'Thanks for voting!'
                 
         format.html {
-          flash[:notice] = success
+          flash[:notice] = 'Thanks for voting!'
           redirect_to @remix
         }
         format.js{
           render :update do |page|
-            page.alert success
+            page.replace_html "vote_link_#{@remix.id}", "&nbsp;"
+            page.replace_html "vote_count_#{@remix.id}", pluralize(@remix.votes_count + 1)
           end
         }
         
