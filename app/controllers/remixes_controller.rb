@@ -14,10 +14,6 @@ class RemixesController < ApplicationController
     @remix = Remix.new
   end
 
-  def edit
-    # add redirect to soundcloud edit page...
-  end
-
   def create
 
     @remix = Remix.new(params[:remix])
@@ -49,6 +45,25 @@ class RemixesController < ApplicationController
       
     else
       render :action => "new"
+    end
+    
+  end
+  
+  def status
+    
+    remix = Remix.find(params[:id])
+    
+    if remix.available?
+    
+      render :update do |page|
+        page << "check_var = false;"
+        page.replace_html 'soundcloud', :partial => "player", :locals => {:remix => remix}
+      end
+    
+    else
+      
+      render :nothing => true
+      
     end
     
   end

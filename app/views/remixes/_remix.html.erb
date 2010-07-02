@@ -24,27 +24,25 @@
 
 	<div class="clear"></div>
 	
+	<div id="soundcloud">
+	
 	<% if params[:action] == "show" && !remix.available? %>
 
 		<div class="processing">
+			
+			<script type="text/javascript">check_var = true;</script>
+			<%= periodically_call_remote(:url => status_path(remix.id), :condition => "check_var == true", :frequency => '5') -%>
 
-			Processing<br>
-			<%= image_tag "throbber.gif" %>
+			Processing<br><%= image_tag "throbber.gif" %>
 
 		</div>
 		
 	<% else %>
 
-		<div class="player">
-
-			<object height="81" width="100%"> 
-				<param name="movie" value="http://player.soundcloud.com/player.swf?url=<%= remix.url -%>"></param> 
-				<param name="allowscriptaccess" value="always"></param> 
-				<embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=<%= remix.url -%>" type="application/x-shockwave-flash" width="100%"></embed> 
-			</object>
-
-		</div>
+		<%= render :partial => "player", :locals => {:remix => remix} -%>
 
 	<% end %>
+	
+	</div>
 
 </div>
