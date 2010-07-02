@@ -16,7 +16,7 @@ class VotesController < ApplicationController
         format.js{
           render :update do |page|
             page.replace_html "vote_link_#{@remix.id}", "&nbsp;"
-            page.replace_html "vote_count_#{@remix.id}", pluralize(@remix.votes_count + 1)
+            page.replace_html "vote_count_#{@remix.id}", pluralize((@remix.votes_count + 1), 'vote')
           end
         }
         
