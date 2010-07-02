@@ -1,25 +1,29 @@
 <div class="block">
-
-	<h2>Remix On Aviary</h2>
+	
+	<h2>Remix "The Glow"</h2>
 
 	<p>
-	
-		<%= link_to "launch aviary", "http://aviary.com/launch/myna?config=rjd2", :target => "_blank" -%>
+		
+		We've made the stems from "The Glow" available below.<br>
+		<br>
+		If you don't have any remixing software, you can use avairy.com's online remix software by clicking <%= link_to "here", "http://aviary.com/launch/myna?config=rjd2", :target => "_blank" -%><br>
+		<br>
+		The deadline for submissions is X. [ insert this is how you win ]<br>
+		<br>
+		[ insert soundcloud widget ]<br>
+		<br>
+		<%= link_to 'Upload Your Remix', new_remix_path %>
 		
 	</p>
 
-	<h2>Upload Your Remix</h2>
+</div>
 
-	<p>
+<div class="block">
+	
+	<h2>Listen To The Remixes</h2>
 
-		<%= link_to 'upload your remix', new_remix_path %>
-
-	</p>
-
-	<h2>Listen To & Vote On The Remixes</h2>
-
-	<p>Sorting / Options</p>
-
+	<p>Most Popular / Most Recent / Random</p>
+	
 </div>
 
 <%= render @remixes %>
