@@ -42,10 +42,7 @@ h2{ color: #000; }
 
 .remix{ }
 
-.player, .processing{
-	margin-top: 10px;
-	-webkit-box-shadow: #ebebeb 0px 3px 7px;
-}
+#soundcloud{ margin-top: 10px; }
 
 .processing{
 	background-color: #000;
@@ -62,20 +59,19 @@ h2{ color: #000; }
 }
 
 .block, .remix, .processing, #notice, .pagination{
-	-moz-border-radius: 5px; 
-	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px; -webkit-border-radius: 5px;
 }
 
 .button{
-	background-color: #EEE;
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#E3E3E3), to(white));
+	background-color: #E3E3E3;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#E3E3E3));
 	color: #333;
-	border: 1px solid #FFF;
-	-moz-border-radius: 12px; 
-	-webkit-border-radius: 12px;
-	font-weight: normal;
-	font-size: 15px;
-	padding: 4px 15px 5px 15px;
+	display: block;
+	font: 15px normal 'Lucida Grande', Helvetica, Arial, sans-serif; 
+	-moz-border-radius: 12px; -webkit-border-radius: 12px;
+	padding: 3px 0 4px 0;
+	text-align: center;
+	width: 175px;
 }
 
 .button:hover{ color: #b14647; }

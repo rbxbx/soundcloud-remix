@@ -35,9 +35,12 @@
 	
 	<div id="wrapper">
 		
-		<div class="fl"><%= link_to image_tag("logo.png", :border => 0), root_path -%></div>
-		<div class="fr"><%= link_to 'Upload Your Remix', upload_path, :class => "button" %></div>
-		<div class="clear"></div>
+		<table cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom:10px;">
+			<tr>
+				<td><%= link_to image_tag("logo.png", :border => 0), root_path -%></td>
+				<td align="right"><%= link_to 'Upload Your Remix', upload_path, :class => "button" %></td>
+			</tr>
+		</table>
 
 		<% if flash[:notice] %><div id="notice"><%= flash[:notice] %></div><% end %>
 
