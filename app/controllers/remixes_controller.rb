@@ -3,7 +3,7 @@ class RemixesController < ApplicationController
   before_filter :login_required, :except => [:index, :show]
 
   def index
-    @remixes = Remix.paginate :page => params[:page], :order => params[:sort] || :created_at
+    @remixes = Remix.paginate :page => params[:page], :order => params[:sort] || "created_at DESC"
   end
 
   def show
