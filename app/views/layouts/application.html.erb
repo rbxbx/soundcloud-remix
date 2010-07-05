@@ -37,7 +37,7 @@
 			
 		<p><%= link_to image_tag("logo.png", :border => 0), root_path -%></p>
 
-		<% if flash[:notice] %><div class="notice"><%= flash[:notice] %></div><% end %>
+		<% if flash[:notice] %><div id="notice"><%= flash[:notice] %></div><% end %>
 
 		<%= yield %>
 	

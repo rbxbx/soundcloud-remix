@@ -53,7 +53,7 @@ h2{ color: #000; }
 	text-align: center;
 }
 
-.notice{
+#notice{
 	background-color: #000;
 	border: 2px solid #CCC;
 	color: #FFF;
@@ -61,7 +61,7 @@ h2{ color: #000; }
 	margin-bottom: 10px;
 }
 
-.block, .remix, .processing, .notice, .pagination{ border-radius: 5px; }
+.block, .remix, .processing, #notice, .pagination{ border-radius: 5px; }
 
 .fl{ float: left; }
 .fr{ float: right; }
