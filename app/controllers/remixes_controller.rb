@@ -24,8 +24,8 @@ class RemixesController < ApplicationController
       new_track.title = @remix.title
       new_track.asset_data = @remix.asset_data
       new_track.artwork_data = File.new("#{RAILS_ROOT}/public/images/cover.jpg")
-      new_track.description = SETTINGS["remix_description"]
-      new_track.tag_list = SETTINGS["remix_tag_list"]
+      new_track.description = SETTINGS["remix"]["description"]
+      new_track.tag_list = SETTINGS["remix"]["tag_list"]
       new_track.track_type = "remix"
       
       if new_track.save
@@ -36,9 +36,9 @@ class RemixesController < ApplicationController
         @remix.track_id = new_track.id
         @remix.save
         
-        puts current_user.token.put("/groups/#{SETTINGS["remix_group_id"]}/contributions/#{new_track.id}")
+        puts current_user.token.put("/groups/#{SETTINGS["group_id"]}/contributions/#{new_track.id}")
       
-        flash[:notice] = 'Remix was successfully created. It will show up here once the waveform is created on SoundCloud.'
+        flash[:notice] = 'Remix was successfully uploaded. It will show up here once created on SoundCloud.'
         redirect_to remix_url(@remix)
         
       end
