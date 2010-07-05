@@ -4,14 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>RJD2 Remix Contest</title>
+  <title><%= SETTINGS["title"] -%></title>
 
-	<meta name="title" content="RJD2 Remix Contest" />
-	<meta name="description" content="RJD2 Remix Contest" /> 
+	<meta name="title" content="<%= SETTINGS["title"] -%>" />
+	<meta name="description" content="<%= SETTINGS["description"] -%>" /> 
 
 	<link href="<%= root_url -%>images/cover.jpg" rel="image_src" /> 
 
-	<meta property="og:site_name" content="RJD2 Remix Contest" />
+	<meta property="og:site_name" content="<%= SETTINGS["title"] -%>" />
 	<meta property="fb:admins" content="23424322"/>	
 	
 	<% if params[:action] == "show" %>
@@ -31,7 +31,7 @@
 
 	<% else %>
 	
-	<meta property="og:title" content="RJD2 Remix Contest"/> 
+	<meta property="og:title" content="<%= SETTINGS["title"] -%>"/> 
   <meta property="og:type" content="website"/> 
   <meta property="og:url" content="<%= root_url -%>"/> 
   <meta property="og:image" content="<%= root_url -%>images/cover.jpg" />
