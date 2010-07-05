@@ -23,7 +23,7 @@ class RemixesController < ApplicationController
       new_track = current_user.soundcloud.Track.new
       new_track.title = @remix.title
       new_track.asset_data = @remix.asset_data
-      new_track.artwork_data = File.new("#{RAILS_ROOT}/public/images/cover.jpg")
+      new_track.artwork_data = File.new("#{RAILS_ROOT}/public/images/artwork.jpg")
       new_track.description = SETTINGS["remix"]["description"]
       new_track.tag_list = SETTINGS["remix"]["tag_list"]
       new_track.track_type = "remix"
