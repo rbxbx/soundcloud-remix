@@ -61,7 +61,24 @@ h2{ color: #000; }
 	margin-bottom: 10px;
 }
 
-.block, .remix, .processing, #notice, .pagination{ border-radius: 5px; }
+.block, .remix, .processing, #notice, .pagination{
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+}
+
+.button{
+	background-color: #EEE;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#E3E3E3), to(white));
+	color: #333;
+	border: 1px solid #FFF;
+	-moz-border-radius: 12px; 
+	-webkit-border-radius: 12px;
+	font-weight: normal;
+	font-size: 15px;
+	padding: 4px 15px 5px 15px;
+}
+
+.button:hover{ color: #b14647; }
 
 .fl{ float: left; }
 .fr{ float: right; }
