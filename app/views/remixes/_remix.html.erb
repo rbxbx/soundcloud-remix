@@ -1,32 +1,36 @@
 <div class="remix">
+	
+	<div id="info">
 
-	<div class="fl" style="padding-right:10px;">
+		<div class="fl" style="padding-right:10px;">
 
-		<%= image_tag remix.user.avatar_url, :height => 40, :width => 40 %>
+			<%= image_tag remix.user.avatar_url, :height => 40, :width => 40 %>
 
-	</div>
+		</div>
 
-	<div class="fl">
+		<div class="fl">
 
-		<h2><%= link_to remix.title, remix -%></h2>
+			<h2><%= link_to remix.title, remix -%></h2>
 
-		Uploaded by <%= link_to remix.user.name, remix.user.permalink_url, :target => "_blank" -%> <%= time_ago_in_words remix.created_at -%> ago
+			Uploaded by <%= link_to remix.user.name, remix.user.permalink_url, :target => "_blank" -%> <%= time_ago_in_words remix.created_at -%> ago
 
-	</div>
+		</div>
 
-	<div class="fr" style="text-align:right;">
+		<div class="fr" style="text-align:right;">
 		
-		<h2 id="vote_link_<%= remix.id -%>"><%= remix.voted?(request.remote_ip) ? "&nbsp;" : link_to_remote("Vote", :url => vote_path(remix.id)) %></h2>
+			<h2 id="vote_link_<%= remix.id -%>"><%= remix.voted?(request.remote_ip) ? "&nbsp;" : link_to_remote("Vote", :url => vote_path(remix.id)) %></h2>
 
-		<span id="vote_count_<%= remix.id -%>"><%= pluralize remix.votes_count, 'vote' -%></span>
+			<span id="vote_count_<%= remix.id -%>"><%= pluralize remix.votes_count, 'vote' -%></span>
 
+		</div>
+
+		<div class="clear"></div>
+	
 	</div>
-
-	<div class="clear"></div>
 	
 	<div id="soundcloud">
 	
-	<% if params[:action] == "show" && !remix.available? %>
+		<% if params[:action] == "show" && !remix.available? %>
 
 		<div class="processing">
 			
@@ -37,11 +41,11 @@
 
 		</div>
 		
-	<% else %>
+		<% else %>
 
 		<%= render :partial => "player", :locals => {:remix => remix} -%>
 
-	<% end %>
+		<% end %>
 	
 	</div>
 

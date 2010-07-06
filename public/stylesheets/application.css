@@ -30,15 +30,13 @@ h1, h2{
 	width: 650px;
 }
 
-#header{ margin-bottom: 10px; }
+#header, #info{ margin-bottom: 10px; }
 
 .block, .remix, .pagination{
 	background-color: #fff;
 	margin-bottom: 10px;
 	padding: 20px;
 }
-
-#soundcloud{ margin-top: 10px; }
 
 .processing{
 	background-color: #000;
