@@ -5,7 +5,7 @@
 
 body{
 	background: #000 url('/images/bg.jpg') top center no-repeat fixed;
-	color: #999999;
+	color: #999;
 	font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	font-size: 12px;
 	padding: 40px 0 20px 0;
@@ -20,7 +20,7 @@ a{
 p{ margin: 15px 0; }
 
 h1, h2{
-	color: #000000;
+	color: #000;
 	font-weight: normal;
 }
 
@@ -54,6 +54,7 @@ h1, h2{
 .button{
 	background-color: #E3E3E3;
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#E3E3E3));
+	color: #000;
 	display: block;
 	font-size: 15px;
 	-moz-border-radius: 13px; -webkit-border-radius: 13px;
@@ -61,6 +62,8 @@ h1, h2{
 	text-align: center;
 	width: 175px;
 }
+
+.button:hover{ color: #b14647; }
 
 .share a{
 	background: url("/images/icons.png") no-repeat;
