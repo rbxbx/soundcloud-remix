@@ -10,7 +10,7 @@
 
 		<h2><%= link_to remix.title, remix -%></h2>
 
-		Uploaded by <%= link_to remix.user.username, remix.user.permalink_url, :target => "_blank" -%> <%= time_ago_in_words remix.created_at -%> ago
+		Uploaded by <%= link_to remix.user.name, remix.user.permalink_url, :target => "_blank" -%> <%= time_ago_in_words remix.created_at -%> ago
 
 	</div>
 

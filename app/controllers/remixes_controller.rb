@@ -8,10 +8,12 @@ class RemixesController < ApplicationController
 
   def show
     @remix = Remix.find(params[:id])
+    @page_title = "#{@remix.user.name} - #{@remix.title}"
   end
 
   def new
     @remix = Remix.new
+    @page_title = "Upload Your Remix"
   end
 
   def create
