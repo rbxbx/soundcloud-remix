@@ -30,17 +30,10 @@ h1, h2{
 	width: 650px;
 }
 
-#header, #info{ margin-bottom: 10px; }
-
-.block, .remix, .pagination{
-	background-color: #fff;
-	margin-bottom: 10px;
-	padding: 20px;
-}
+.block, .remix, .pagination{ background-color: #fff; }
 
 .processing{
 	background-color: #000;
-	padding: 20px;
 	text-align: center;
 }
 
@@ -48,31 +41,29 @@ h1, h2{
 	background-color: #000;
 	border: 2px solid #CCC;
 	color: #FFF;
-	padding: 10px 20px;
-	margin-bottom: 10px;
+	padding: 10px 0;
+	text-align: center;
 }
 
-.block, .remix, .processing, #notice, .pagination{
-	-moz-border-radius: 5px; -webkit-border-radius: 5px;
-}
+.block, .remix, .pagination, #header, #info, #notice{ margin-bottom: 10px; }
+
+.block, .remix, .pagination, .processing{ padding: 20px; }
+
+.block, .remix, .processing, .pagination, #notice{ -moz-border-radius: 5px; -webkit-border-radius: 5px; }
 
 .button{
 	background-color: #E3E3E3;
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#E3E3E3));
-	color: #333;
 	display: block;
-	font: 15px 'Lucida Grande', Helvetica, Arial, sans-serif; 
-	-moz-border-radius: 12px; -webkit-border-radius: 12px;
-	padding: 3px 0 4px 0;
+	font-size: 15px;
+	-moz-border-radius: 13px; -webkit-border-radius: 13px;
+	padding: 5px 0 6px 0;
 	text-align: center;
 	width: 175px;
 }
 
-.button:hover{ color: #b14647; }
-
 .share a{
-	background-image: url("/images/icons.png");
-	background-repeat: no-repeat;
+	background: url("/images/icons.png") no-repeat;
 	display: block;
 	float: left;
 	margin-left: 2px;
@@ -80,14 +71,8 @@ h1, h2{
 
 .share a.myspace { background-position: 0 0px; }
 .share a.facebook { background-position: 0 -21px; }
-.share a.delicious { background-position: 0 -63px; }
-.share a.digg { background-position: 0 -83px; }
-.share a.stumbleupon { background-position: 0 -104px; }
 .share a.twitter { background-position: 0 -41px; }
 .share a.email { background-position: 0 -124px; }
-.share a.friendfeed { background-position: 0 -145px; }
-.share a.blogger { background-position: 0 -167px; }
-.share a.wordpress { background-position: 0 -189px; }
 
 .fl{ float: left; }
 .fr{ float: right; }
