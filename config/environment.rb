@@ -22,7 +22,6 @@ Rails::Initializer.run do |config|
   config.gem "soundcloud-auth", :lib => "soundcloud_auth"
   config.gem "will_paginate"
   config.gem "httparty"
-  config.gem "RedCloth"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
