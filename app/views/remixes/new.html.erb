@@ -10,14 +10,14 @@
 
 		<%= f.hidden_field :user_id, :value => current_user["id"] %>
 	
-		<p style="margin: 15px 0;"><%= f.label :title, "remix title" %><br>
+		<p><%= f.label :title, "remix title:" %><br>
 		<%= f.text_field :title %></p>
 	
 		<p><%= f.file_field :asset_data %></p>
 		
 		<p><small>Files must be smaller than 10mb. OGG, MP3, AAC</small></p>
 
-	  <p style="margin: 15px 0;"><%= f.submit 'Upload' %>&nbsp;&nbsp;<%= link_to "Cancel", remixes_path -%></p>
+	  <p><%= f.submit 'Upload' %>&nbsp;&nbsp;<%= link_to "Cancel", remixes_path -%></p>
 
 	<% end %>
 

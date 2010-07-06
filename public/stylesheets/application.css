@@ -5,7 +5,7 @@
 
 body{
 	background: #000 url('/images/bg.jpg') top center no-repeat fixed;
-	color: #999;
+	color: #999999;
 	font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	font-size: 12px;
 	padding: 40px 0 20px 0;
@@ -14,19 +14,15 @@ body{
 
 a{
 	color: #b14647;
-	font-weight: bold;
 	text-decoration: none;
 }
 
-p{ margin: 10px 0; }
+p{ margin: 15px 0; }
 
-h1{
-	color: #999;
+h1, h2{
+	color: #000000;
 	font-weight: normal;
-	margin-bottom: 20px;
 }
-
-h2{ color: #000; }
 
 #wrapper{
 	margin: 0 auto;
@@ -39,8 +35,6 @@ h2{ color: #000; }
 	margin-bottom: 10px;
 	padding: 20px;
 }
-
-.remix{ }
 
 #soundcloud{ margin-top: 10px; }
 
@@ -67,7 +61,7 @@ h2{ color: #000; }
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#E3E3E3));
 	color: #333;
 	display: block;
-	font: 15px normal 'Lucida Grande', Helvetica, Arial, sans-serif; 
+	font: 15px 'Lucida Grande', Helvetica, Arial, sans-serif; 
 	-moz-border-radius: 12px; -webkit-border-radius: 12px;
 	padding: 3px 0 4px 0;
 	text-align: center;

@@ -1,4 +1,4 @@
-<h2>Remix "The Glow"</h2>
+<h1>Remix "The Glow"</h1>
 
 <p>
 
