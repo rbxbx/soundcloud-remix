@@ -24,25 +24,26 @@
 	
 	</div>
 	
-	<div id="soundcloud">
-	
-		<% if params[:action] == "show" && !remix.available? %>
+	<% if params[:action] == "show" && !remix.available? %>
+		
+	<div id="processor">
 
 		<div class="processing">
 			
 			<script type="text/javascript">check_var = true;</script>
+			
 			<%= periodically_call_remote(:url => status_path(remix.id), :condition => "check_var == true", :frequency => '15') -%>
 
 			Processing<br><%= image_tag "throbber.gif" %>
 
 		</div>
 		
-		<% else %>
-
-		<%= render :partial => "player", :locals => {:remix => remix} -%>
-
-		<% end %>
-	
 	</div>
+		
+	<% else %>
+
+	<%= render :partial => "player", :locals => {:remix => remix} -%>
+
+	<% end %>
 
 </div>

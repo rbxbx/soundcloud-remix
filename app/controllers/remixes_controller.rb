@@ -59,7 +59,7 @@ class RemixesController < ApplicationController
     
       render :update do |page|
         page << "check_var = false;"
-        page.replace_html 'soundcloud', :partial => "player", :locals => {:remix => remix}
+        page.replace_html 'processor', :partial => "player", :locals => {:remix => remix}
         page.hide 'notice'
       end
     
