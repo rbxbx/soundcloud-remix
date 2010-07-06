@@ -76,6 +76,25 @@ h2{ color: #000; }
 
 .button:hover{ color: #b14647; }
 
+.share a{
+	background-image: url("/images/icons.png");
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	margin-left: 2px;
+}
+
+.share a.myspace { background-position: 0 0px; }
+.share a.facebook { background-position: 0 -21px; }
+.share a.delicious { background-position: 0 -63px; }
+.share a.digg { background-position: 0 -83px; }
+.share a.stumbleupon { background-position: 0 -104px; }
+.share a.twitter { background-position: 0 -41px; }
+.share a.email { background-position: 0 -124px; }
+.share a.friendfeed { background-position: 0 -145px; }
+.share a.blogger { background-position: 0 -167px; }
+.share a.wordpress { background-position: 0 -189px; }
+
 .fl{ float: left; }
 .fr{ float: right; }
 .clear{ clear: both; }
