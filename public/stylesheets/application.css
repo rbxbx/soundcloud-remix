@@ -47,9 +47,7 @@ h1, h2{
 }
 
 .block, .remix, .pagination, #header, #info, #notice{ margin-bottom: 10px; }
-
 .block, .remix, .pagination, .processing{ padding: 20px; }
-
 .block, .remix, .processing, .pagination, #notice{ -moz-border-radius: 5px; -webkit-border-radius: 5px; }
 
 .button{
