@@ -30,6 +30,8 @@ h1, h2{
 	width: 650px;
 }
 
+#header{ margin-bottom: 10px; }
+
 .block, .remix, .pagination{
 	background-color: #fff;
 	margin-bottom: 10px;
