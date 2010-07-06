@@ -2,7 +2,7 @@
 
 	<h2>Upload Your Remix</h2>
 	
-	<p><% if logged_in? %>You're <%= current_user.username -%>, <%= link_to 'Sign out?', logout_path -%><% end %></p>
+	<p>You're <%= current_user.username -%>, <%= link_to 'Sign out?', logout_path -%></p>
 
 	<% form_for(@remix, :html => {:multipart => true}) do |f| %>
 
