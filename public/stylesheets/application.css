@@ -16,6 +16,7 @@ a{
 	color: #b14647;
 	text-decoration: none;
 }
+a:hover{ text-decoration: underline; }
 
 p{ margin: 15px 0; }
 
@@ -63,7 +64,7 @@ h1, h2{
 	width: 175px;
 }
 
-.button:hover{ color: #b14647; }
+.button:hover{ color: #b14647; text-decoration: none; }
 
 .share a{
 	background: url("/images/icons.png") no-repeat;
