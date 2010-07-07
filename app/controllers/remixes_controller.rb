@@ -47,6 +47,7 @@ class RemixesController < ApplicationController
           
         else
           
+          puts "looping..."
           sleep 2
           
         end
