@@ -34,7 +34,7 @@
 		auto     		: false,
 		fileDesc		: "Remix",
 		fileExt			: "*.mp3;*.m4a;*.ogg;*.wav",
-		sizeLimit		: 10000000,
+		sizeLimit		: <%= SETTINGS["upload_limit"] -%>,
 		buttonText	: "Choose file",
 		scriptData	: {
         '<%= session_key -%>'		: '<%= u(cookies[session_key]) -%>',
