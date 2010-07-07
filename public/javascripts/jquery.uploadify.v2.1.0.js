@@ -123,13 +123,13 @@ if(jQuery)(
 						if (event.data.queueID) {
 							queue = '#' + event.data.queueID;
 						}
-						jQuery(queue).append('<div id="' + jQuery(this).attr('id') + ID + '" class="uploadifyQueueItem">\
-								<div class="cancel">\
-									<a href="javascript:jQuery(\'#' + jQuery(this).attr('id') + '\').uploadifyCancel(\'' + ID + '\')"><img src="' + settings.cancelImg + '" border="0" /></a>\
-								</div>\
+						jQuery(queue).append('<h2 class="uploadifyHeader">Uploading...</h2><div id="' + jQuery(this).attr('id') + ID + '" class="uploadifyQueueItem">\
 								<span class="fileName">' + fileName + ' (' + byteSize + suffix + ')</span><span class="percentage"></span>\
 								<div class="uploadifyProgress">\
 									<div id="' + jQuery(this).attr('id') + ID + 'ProgressBar" class="uploadifyProgressBar"><!--Progress Bar--></div>\
+								</div>\
+								<div class="cancel">\
+									<a href="javascript:jQuery(\'#' + jQuery(this).attr('id') + '\').uploadifyCancel(\'' + ID + '\')">Cancel</a>\
 								</div>\
 							</div>');
 					}
@@ -169,8 +169,9 @@ if(jQuery)(
 				});
 				jQuery(this).bind("uploadifyCancel", {'action': settings.onCancel}, function(event, ID, fileObj, data, clearFast) {
 					if (event.data.action(event, ID, fileObj, data, clearFast) !== false) {
-						var fadeSpeed = (clearFast == true) ? 0 : 250;
-						jQuery("#" + jQuery(this).attr('id') + ID).fadeOut(fadeSpeed, function() { jQuery(this).remove() });
+						//var fadeSpeed = (clearFast == true) ? 0 : 250;
+						//jQuery("#" + jQuery(this).attr('id') + ID).fadeOut(fadeSpeed, function() { jQuery(this).remove() });
+						top.location.href = '/remixes/new';
 					}
 				});
 				if (typeof(settings.onClearQueue) == 'function') {
