@@ -28,7 +28,7 @@ class Remix < ActiveRecord::Base
   end
   
   def file_size
-    if file && (file.size < SETTINGS["upload_limit"])
+    if file && (file.size > SETTINGS["upload_limit"])
       errors.add(:file, "must be under #{number_to_human_size(SETTINGS["upload_limit"], :precision => 0)} in size")
     end
   end
