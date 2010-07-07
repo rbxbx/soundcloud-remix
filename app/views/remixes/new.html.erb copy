@@ -1,0 +1,23 @@
+<div class="block">
+
+	<h2>Upload Your Remix</h2>
+	
+	<p>You're <%= current_user.username -%>, <%= link_to 'Sign out?', logout_path -%></p>
+
+	<% form_for(@remix, :html => {:multipart => true}) do |f| %>
+
+	  <%= f.error_messages %>
+
+		<%= f.hidden_field :user_id, :value => current_user["id"] %>
+	
+		<p><%= f.label :title, "remix title:" %><br><%= f.text_field :title %></p>
+	
+		<p><%= f.file_field :file %></p>
+		
+		<small>Files must be smaller than <%= number_to_human_size(SETTINGS["upload_limit"], :precision => 0) -%>. OGG, MP3, AAC</small>
+
+	  <p><%= f.submit 'Upload' %>&nbsp;&nbsp;<%= link_to "Cancel", remixes_path -%></p>
+
+	<% end %>
+
+</div>
