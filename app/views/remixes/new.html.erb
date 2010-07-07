@@ -14,7 +14,7 @@
 	
 		<p><%= f.file_field :asset_data %></p>
 		
-		<small>Files must be smaller than 10mb. OGG, MP3, AAC</small>
+		<small>Files must be smaller than <%= number_to_human_size(SETTINGS["upload_limit"], :precision => 0) -%>. OGG, MP3, AAC</small>
 
 	  <p><%= f.submit 'Upload' %>&nbsp;&nbsp;<%= link_to "Cancel", remixes_path -%></p>
 

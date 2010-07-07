@@ -21,32 +21,34 @@ class RemixesController < ApplicationController
     @remix = Remix.new(params[:remix])
 
     if @remix.save
-      
+    
       new_track = current_user.soundcloud.Track.new
       new_track.title = @remix.title
-      new_track.asset_data = @remix.asset_data
+      new_track.asset_data = @remix.file
       new_track.artwork_data = File.new("#{RAILS_ROOT}/public/images/artwork.jpg")
       new_track.description = SETTINGS["remix"]["description"]
       new_track.tag_list = SETTINGS["remix"]["tag_list"]
       new_track.track_type = "remix"
-      
+    
       if new_track.save
-        
+      
         new_track.purchase_url = vote_url(@remix.id)
         new_track.save
-        
+      
         @remix.track_id = new_track.id
         @remix.save
-        
-        puts current_user.token.put("/groups/#{SETTINGS["group_id"]}/contributions/#{new_track.id}")
       
+        puts current_user.token.put("/groups/#{SETTINGS["group_id"]}/contributions/#{new_track.id}")
+    
         flash[:notice] = 'Remix was successfully uploaded. It will show up here once created on SoundCloud.'
         redirect_to remix_url(@remix)
-        
-      end
       
+      end
+    
     else
+    
       render :action => "new"
+    
     end
     
   end
