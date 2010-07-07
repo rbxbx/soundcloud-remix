@@ -38,7 +38,7 @@ class RemixesController < ApplicationController
       
       i = 0
       
-      while i = 0 do
+      while i == 0 do
         
         if new_track.save
           
