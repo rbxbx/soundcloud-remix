@@ -1,8 +1,6 @@
 <div class="block">
 
 	<h2>Upload Your Remix</h2>
-	
-	<p>You're <%= current_user.username -%>, <%= link_to 'Sign out?', logout_path -%></p>
 
 	<% form_for(@remix, :html => {:multipart => true}) do |f| %>
 
