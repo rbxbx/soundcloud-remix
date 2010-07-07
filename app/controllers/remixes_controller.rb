@@ -18,7 +18,14 @@ class RemixesController < ApplicationController
 
   def create
     
-    @remix = Remix.new(:file => params[:Filedata], :title => params[:title], :user_id => current_user[:id])
+    respond_to do |format|
+      format.html{ 
+        @remix = Remix.new(:user_id => current_user[:id], :file => params[:remix][:file], :title => params[:remix][:title])
+      }
+      format.js{ 
+        @remix = Remix.new(:user_id => current_user[:id], :file => params[:Filedata], :title => params[:title])
+      }
+    end
     
     new_track = current_user.soundcloud.Track.new
     new_track.title = @remix.title
@@ -47,18 +54,22 @@ class RemixesController < ApplicationController
           
         else
           
-          puts "looping..."
           sleep 2
           
         end
         
       end
       
-      #flash[:notice] = 'Remix was successfully uploaded. It will show up here once created on SoundCloud.'
-      #redirect_to remix_url(@remix)
-      
-      render :update do |page|
-        page << "top.location.href = '#{remix_path(@remix)}';"
+      respond_to do |format|
+        format.html{ 
+          flash[:notice] = 'Remix was successfully uploaded. It will show up here once created on SoundCloud.'
+          redirect_to remix_url(@remix)
+        }
+        format.js{
+          render :update do |page|
+            page << "top.location.href = '#{remix_path(@remix)}';"
+          end
+        }
       end
       
     else

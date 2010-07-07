@@ -11,8 +11,14 @@
 		<%= f.file_field :file %>
 		
 		<p id="info"><small>Files must be smaller than <%= number_to_human_size(SETTINGS["upload_limit"], :precision => 0) -%>. OGG, MP3, AAC</small></p>
-	
-		<p id="upload"><%= link_to "Upload", "javascript:startUpload('photo_file')" -%></p>
+		
+		<p id="upload">
+		
+		<script type="text/javascript">document.write('<a href="javascript:startUpload(\'#photo_file\')">Upload</a>');</script>
+		
+		<noscript><%= f.submit 'Upload' %></noscript>
+		
+		</p>
 
 	<% end %>
 
@@ -44,14 +50,9 @@
 		$('#remix_fileUploader').width(1);
 		$('#remix_fileUploader').height(1);
 		
-		$('#form_header').hide();
-		$('#title').hide();
-		$('#info').hide();
-		$('#upload').hide();
+		$('#form_header,#title,#info,#upload').hide();
 		
-		$('.uploadifyHeader').show();
-		$('.uploadifyProgress').show();
-		$('.cancel').show();
+		$('.uploadifyHeader,.uploadifyProgress,.cancel').show();
 		
 		$('#remix_file').uploadifySettings('scriptData',{'title' : $('#remix_title').val()});
 	  $('#remix_file').uploadifyUpload();
