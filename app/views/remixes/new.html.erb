@@ -7,8 +7,6 @@
 	<% form_for(@remix, :html => {:multipart => true}) do |f| %>
 
 	  <%= f.error_messages %>
-
-		<%= f.hidden_field :user_id, :value => current_user["id"] %>
 	
 		<p><%= f.label :title, "remix title:" %><br><%= f.text_field :title %></p>
 	
@@ -16,8 +14,50 @@
 		
 		<small>Files must be smaller than <%= number_to_human_size(SETTINGS["upload_limit"], :precision => 0) -%>. OGG, MP3, AAC</small>
 
-	  <p><%= f.submit 'Upload' %>&nbsp;&nbsp;<%= link_to "Cancel", remixes_path -%></p>
+	  <!--><p><%= f.submit 'Upload' %>&nbsp;&nbsp;<%= link_to "Cancel", remixes_path -%></p>-->
+	
+		<p><%= link_to "Create", "javascript:startUpload('photo_file')" -%></p>
 
 	<% end %>
 
 </div>
+
+<%- session_key = ActionController::Base.session_options[:key] -%>
+
+<script type="text/javascript">
+
+	$('#remix_file').uploadify({
+		uploader  	: '/flash/uploadify.swf',
+		script    	: '/remixes',
+		cancelImg 	: '/images/cancel.png',
+		auto     		: false,
+		fileDesc		: "Remix",
+		fileExt			: "*.mp3;*.m4a;*.ogg;*.wav",
+		sizeLimit		: 10000000,
+		onComplete  : function(a, b, c, response, data){ eval(response) },
+		
+		//onSelect	: false,
+		//onProgress : function(event, queueID, fileObj, data){
+		//	$('#progress').text(data.percentage);
+		//},
+		scriptData	: {
+        '<%= session_key -%>'		: '<%= u(cookies[session_key]) -%>',
+        'authenticity_token'		: '<%= u(form_authenticity_token) -%>',
+				'_http_accept'					: "application/javascript"
+    }
+	});
+	
+	function startUpload(id){
+
+		$('#remix_file').uploadifySettings('hideButton','true');
+		$('#remix_fileUploader').width(1);
+		$('#remix_fileUploader').height(1);
+		
+		$('#title').hide();
+		
+		$('#remix_file').uploadifySettings('scriptData',{'title' : $('#remix_title').val()});
+	  $('#remix_file').uploadifyUpload();
+
+	}
+
+</script>

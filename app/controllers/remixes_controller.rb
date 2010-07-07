@@ -17,11 +17,11 @@ class RemixesController < ApplicationController
   end
 
   def create
-
-    @remix = Remix.new(params[:remix])
-
-    if @remix.save
     
+    @remix = Remix.new(:file => params[:Filedata], :title => params[:title], :user_id => current_user[:id])
+    
+    if @remix.save
+      
       new_track = current_user.soundcloud.Track.new
       new_track.title = @remix.title
       new_track.asset_data = @remix.file
@@ -29,7 +29,7 @@ class RemixesController < ApplicationController
       new_track.description = SETTINGS["remix"]["description"]
       new_track.tag_list = SETTINGS["remix"]["tag_list"]
       new_track.track_type = "remix"
-    
+      
       if new_track.save
       
         new_track.purchase_url = vote_url(@remix.id)
@@ -40,8 +40,12 @@ class RemixesController < ApplicationController
       
         puts current_user.token.put("/groups/#{SETTINGS["group_id"]}/contributions/#{new_track.id}")
     
-        flash[:notice] = 'Remix was successfully uploaded. It will show up here once created on SoundCloud.'
-        redirect_to remix_url(@remix)
+        #flash[:notice] = 'Remix was successfully uploaded. It will show up here once created on SoundCloud.'
+        #redirect_to remix_url(@remix)
+        
+        render :update do |page|
+          page << "top.location.href = '#{remix_path(@remix)}';"
+        end
       
       end
     
@@ -49,7 +53,7 @@ class RemixesController < ApplicationController
     
       render :action => "new"
     
-    end
+    end 
     
   end
   
@@ -62,7 +66,7 @@ class RemixesController < ApplicationController
       render :update do |page|
         page << "check_var = false;"
         page.replace_html 'processor', :partial => "player", :locals => {:remix => remix}
-        page.hide 'notice'
+        #page.hide 'notice'
       end
     
     else
