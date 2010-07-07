@@ -10,8 +10,6 @@ class Remix < ActiveRecord::Base
   validates_presence_of :title
   validates_presence_of :file
   
-  validate_on_create :file_size
-  
   cattr_reader :per_page
   @@per_page = 5
   
@@ -25,12 +23,6 @@ class Remix < ActiveRecord::Base
   
   def voted?(ip_address)
     Vote.find(:first, :conditions => {:remix_id => id, :ip_address => ip_address}) ? true : false
-  end
-  
-  def file_size
-    if file && (file.size > SETTINGS["upload_limit"])
-      errors.add(:file, "must be under #{number_to_human_size(SETTINGS["upload_limit"], :precision => 0)} in size")
-    end
   end
   
 end
