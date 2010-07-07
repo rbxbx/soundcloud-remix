@@ -38,7 +38,7 @@ class RemixesController < ApplicationController
       
       current_user.token.put("/groups/#{SETTINGS["group_id"]}/contributions/#{new_track.id}")
       
-      flash[:notice] = 'Remix was successfully uploaded. It will show up here once created on SoundCloud.'
+      #flash[:notice] = 'Remix was successfully uploaded. It will show up here once created on SoundCloud.'
       #redirect_to remix_url(@remix)
       
       render :update do |page|
@@ -62,7 +62,6 @@ class RemixesController < ApplicationController
       render :update do |page|
         page << "check_var = false;"
         page.replace_html 'processor', :partial => "player", :locals => {:remix => remix}
-        page << '$("#notice").hide();'
       end
     
     else
