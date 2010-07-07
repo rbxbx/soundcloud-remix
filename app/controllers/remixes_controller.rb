@@ -33,10 +33,10 @@ class RemixesController < ApplicationController
       @remix.track_id = new_track.id
       @remix.save
       
-      new_track.purchase_url = vote_url(@remix.id)
-      new_track.save
+      #new_track.purchase_url = vote_url(@remix.id)
+      #new_track.save
       
-      current_user.token.put("/groups/#{SETTINGS["group_id"]}/contributions/#{new_track.id}")
+      #current_user.token.put("/groups/#{SETTINGS["group_id"]}/contributions/#{new_track.id}")
       
       #flash[:notice] = 'Remix was successfully uploaded. It will show up here once created on SoundCloud.'
       #redirect_to remix_url(@remix)
