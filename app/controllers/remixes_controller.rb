@@ -20,39 +20,35 @@ class RemixesController < ApplicationController
     
     @remix = Remix.new(:file => params[:Filedata], :title => params[:title], :user_id => current_user[:id])
     
-    if @remix.save
-      
-      new_track = current_user.soundcloud.Track.new
-      new_track.title = @remix.title
-      new_track.asset_data = @remix.file
-      new_track.artwork_data = File.new("#{RAILS_ROOT}/public/images/artwork.jpg")
-      new_track.description = SETTINGS["remix"]["description"]
-      new_track.tag_list = SETTINGS["remix"]["tag_list"]
-      new_track.track_type = "remix"
-      
-      if new_track.save
-      
-        new_track.purchase_url = vote_url(@remix.id)
-        new_track.save
-      
-        @remix.track_id = new_track.id
-        @remix.save
-      
-        puts current_user.token.put("/groups/#{SETTINGS["group_id"]}/contributions/#{new_track.id}")
+    new_track = current_user.soundcloud.Track.new
+    new_track.title = @remix.title
+    new_track.asset_data = @remix.file
+    new_track.artwork_data = File.new("#{RAILS_ROOT}/public/images/artwork.jpg")
+    new_track.description = SETTINGS["remix"]["description"]
+    new_track.tag_list = SETTINGS["remix"]["tag_list"]
+    new_track.track_type = "remix"
     
-        #flash[:notice] = 'Remix was successfully uploaded. It will show up here once created on SoundCloud.'
-        #redirect_to remix_url(@remix)
-        
-        render :update do |page|
-          page << "top.location.href = '#{remix_path(@remix)}';"
-        end
+    if new_track.save
       
+      @remix.track_id = new_track.id
+      @remix.save
+      
+      new_track.purchase_url = vote_url(@remix.id)
+      new_track.save
+      
+      current_user.token.put("/groups/#{SETTINGS["group_id"]}/contributions/#{new_track.id}")
+      
+      flash[:notice] = 'Remix was successfully uploaded. It will show up here once created on SoundCloud.'
+      #redirect_to remix_url(@remix)
+      
+      render :update do |page|
+        page << "top.location.href = '#{remix_path(@remix)}';"
       end
-    
+      
     else
-    
+      
       render :action => "new"
-    
+      
     end 
     
   end
@@ -66,7 +62,7 @@ class RemixesController < ApplicationController
       render :update do |page|
         page << "check_var = false;"
         page.replace_html 'processor', :partial => "player", :locals => {:remix => remix}
-        #page.hide 'notice'
+        page << '$("#notice").hide();'
       end
     
     else
