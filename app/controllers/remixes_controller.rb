@@ -48,10 +48,7 @@ class RemixesController < ApplicationController
       
     else
       
-      respond_to do |format|
-        format.html{ render :action => "new" }
-        format.js{ render :js => "top.location.href = '/remixes/new';" }
-      end
+      render :action => "new"
       
     end
     
