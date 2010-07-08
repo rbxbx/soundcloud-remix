@@ -33,6 +33,10 @@ h1, h2{
 	width: 650px;
 }
 
+.fl{ float: left; }
+.fr{ float: right; }
+.clear{ clear: both; }
+
 .block, .remix, .pagination{ background-color: #fff; }
 
 #processing{
@@ -77,10 +81,6 @@ h1, h2{
 .share a.facebook { background-position: 0 -21px; }
 .share a.twitter { background-position: 0 -41px; }
 .share a.email { background-position: 0 -124px; }
-
-.fl{ float: left; }
-.fr{ float: right; }
-.clear{ clear: both; }
 
 /* Upload Bar */
 

@@ -1,8 +1,8 @@
-<div class="block">
-	
-	<%= SETTINGS["instructions"] -%>
+<% if !params[:page] %>
 
-</div>
+<div class="block"><%= SETTINGS["instructions"] -%></div>
+
+<% end %>
 
 <% if @remixes %>
 
