@@ -57,6 +57,12 @@ class RemixesController < ApplicationController
     
   end
   
+  def start_upload
+    
+    puts params[:format]
+    
+  end
+  
   def status
     
     remix = Remix.find(params[:id])

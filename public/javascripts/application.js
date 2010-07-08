@@ -1,14 +1,11 @@
-function startUpload(id){
-
-	$('#remix_file').uploadifySettings('hideButton','true');
-	$('#remix_fileUploader').width(1);
-	$('#remix_fileUploader').height(1);
+function countTitle(){
 	
-	$('#form_header,#title,#info,#upload').hide();
+	var titleLength = document.getElementById("remix_title").value.length;
 	
-	$('.uploadifyHeader,.uploadifyProgress,.cancel').show();
+	if (titleLength > 0){
+		document.getElementById("remix_submit").disabled = false;
+	} else {
+		document.getElementById("remix_submit").disabled = true;
+	}
 	
-	$('#remix_file').uploadifySettings('scriptData',{'remix[title]' : $('#remix_title').val()});
-  $('#remix_file').uploadifyUpload();
-
 }

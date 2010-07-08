@@ -8,6 +8,8 @@ ActionController::Routing::Routes.draw do |map|
   
   map.popular 'remixes/popular', :controller => 'remixes', :action => 'index', :sort => "votes_count DESC"
   
+  map.start_upload 'start_upload', :controller => 'remixes', :action => 'start_upload'
+  
   map.resources :remixes
   
   map.root :controller => "remixes"

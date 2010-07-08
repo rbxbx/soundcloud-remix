@@ -6,7 +6,8 @@
 
 	  <%= f.error_messages %>
 	
-		<p id="title"><%= f.label :title, "remix title:" %><br><%= f.text_field :title %></p>
+		<p id="title"><%= f.label :title, "Remix Title:" %><br>
+		<%= f.text_field :title, :onkeyup => "countTitle();", :onFocus => "countTitle();", :onBlur => "countTitle();" %></p>
 			
 		<%= f.file_field :file %>
 		
@@ -14,7 +15,7 @@
 		
 		<p id="upload">
 		
-		<script type="text/javascript">document.write('<a href="javascript:startUpload(\'#photo_file\')">Upload</a>');</script>
+		<script type="text/javascript">document.write('<%= escape_javascript(button_to_remote("Upload", {:url => start_upload_path}, {:id => "remix_submit", :disabled => "disabled"})) -%>');</script>
 		
 		<noscript><%= f.submit 'Upload' %></noscript>
 		
