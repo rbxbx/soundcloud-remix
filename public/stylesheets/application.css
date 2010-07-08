@@ -35,7 +35,7 @@ h1, h2{
 
 .block, .remix, .pagination{ background-color: #fff; }
 
-.processing{
+#processing{
 	background-color: #000;
 	text-align: center;
 }
@@ -49,7 +49,7 @@ h1, h2{
 }
 
 .block, .remix, .pagination, #header, #info, #notice{ margin-bottom: 10px; }
-.block, .remix, .pagination, .processing{ padding: 20px; }
+.block, .remix, .pagination, #processing{ padding: 20px; }
 .block, .remix, .processing, .pagination, #notice{ -moz-border-radius: 5px; -webkit-border-radius: 5px; }
 
 .button{
