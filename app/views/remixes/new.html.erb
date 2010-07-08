@@ -42,7 +42,10 @@
 				'_http_accept'					: "application/javascript"
     },
 		fileDataName : "file",
-		onComplete  : function(a, b, c, response, data){ eval(response) }
+		onComplete  : function(a, b, c, response, data){ 
+			$(".uploadifyHeader").text('Saving...');
+			eval(response);
+		}
 	});
 	
 	function startUpload(id){
