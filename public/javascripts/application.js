@@ -8,7 +8,7 @@ function startUpload(id){
 	
 	$('.uploadifyHeader,.uploadifyProgress,.cancel').show();
 	
-	$('#remix_file').uploadifySettings('scriptData',{'title' : $('#remix_title').val()});
+	$('#remix_file').uploadifySettings('scriptData',{'remix[title]' : $('#remix_title').val()});
   $('#remix_file').uploadifyUpload();
 
 }

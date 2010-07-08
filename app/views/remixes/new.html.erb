@@ -41,7 +41,7 @@
         'authenticity_token'		: '<%= u(form_authenticity_token) -%>',
 				'_http_accept'					: "application/javascript"
     },
-		fileDataName : "file",
+		fileDataName : "remix[file]",
 		onComplete  : function(a, b, c, response, data){ 
 			$(".uploadifyHeader").text('Saving...');
 			eval(response);

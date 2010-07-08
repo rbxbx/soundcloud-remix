@@ -19,11 +19,7 @@ class RemixesController < ApplicationController
   def create
     
     @remix = Remix.new(:user_id => current_user[:id])
-    
-    respond_to do |format|
-      format.html{ @remix.attributes = params[:remix] }
-      format.js{ @remix.attributes = {:file => params[:file], :title => params[:title]} }
-    end
+    @remix.attributes = params[:remix]
     
     new_track = current_user.soundcloud.Track.new
     new_track.title = @remix.title
@@ -39,24 +35,19 @@ class RemixesController < ApplicationController
       @remix.track_id = new_track.id
       @remix.save
       
-      new_track.purchase_url = vote_url(@remix.id)
+      current_user.token.put("/groups/#{SETTINGS["group_id"]}/contributions/#{new_track.id}")
       
+=begin
+      new_track.purchase_url = vote_url(@remix.id) 
       i = 0
-      
       while i == 0 do
-        
         if new_track.save
-          
           i = 1
-          current_user.token.put("/groups/#{SETTINGS["group_id"]}/contributions/#{new_track.id}")
-          
         else
-          
           sleep 1
-          
         end
-        
       end
+=end      
       
       respond_to do |format|
         format.html{ redirect_to remix_url(@remix) }
