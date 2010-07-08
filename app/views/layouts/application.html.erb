@@ -42,7 +42,7 @@
 			</tr>
 		</table>
 
-		<% if flash[:notice] %><div id="notice"><%= flash[:notice] %></div><% end %>
+		<%= "<div id='notice'>#{flash[:notice]}</div>" if flash[:notice] -%>
 
 		<%= yield %>
 	
