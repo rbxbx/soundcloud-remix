@@ -29,6 +29,7 @@ class RemixesController < ApplicationController
       new_track.artwork_data = File.new("#{RAILS_ROOT}/public/images/artwork.jpg")
       new_track.description = SETTINGS["remix"]["description"]
       new_track.sharing = "public"
+      new_track.downloadable = SETTINGS["remix"]["downloadable"]
       new_track.tag_list = SETTINGS["remix"]["tag_list"]
       new_track.track_type = "remix"
     
