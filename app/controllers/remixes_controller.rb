@@ -9,6 +9,12 @@ class RemixesController < ApplicationController
   def show
     @remix = Remix.find(params[:id])
     @page_title = "#{@remix.user.name} - #{@remix.title}"
+    
+    respond_to do |format|
+      format.html
+      format.vote{ redirect_to vote_url(@remix.id) }
+    end
+    
   end
 
   def new
