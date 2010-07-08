@@ -37,18 +37,6 @@ class RemixesController < ApplicationController
       
       current_user.token.put("/groups/#{SETTINGS["group_id"]}/contributions/#{new_track.id}")
       
-=begin
-      new_track.purchase_url = vote_url(@remix.id) 
-      i = 0
-      while i == 0 do
-        if new_track.save
-          i = 1
-        else
-          sleep 1
-        end
-      end
-=end      
-      
       respond_to do |format|
         format.html{ redirect_to remix_url(@remix) }
         format.js{ render :js => "top.location.href = '#{remix_path(@remix)}';" }
