@@ -54,7 +54,7 @@ class RemixesController < ApplicationController
           
         else
           
-          sleep 2
+          sleep 1
           
         end
         
