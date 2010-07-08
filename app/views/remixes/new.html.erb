@@ -41,6 +41,7 @@
         'authenticity_token'		: '<%= u(form_authenticity_token) -%>',
 				'_http_accept'					: "application/javascript"
     },
+		fileDataName : "file",
 		onComplete  : function(a, b, c, response, data){ eval(response) }
 	});
 	
