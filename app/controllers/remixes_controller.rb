@@ -56,8 +56,6 @@ class RemixesController < ApplicationController
   
   def start_upload
     
-    puts params[:format]
-    
   end
   
   def status
