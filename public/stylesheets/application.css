@@ -48,7 +48,7 @@ h1, h2{ color: #000; font-weight: normal; }
 .clear{ clear: both; }
 
 .block, .remix, .pagination{ background-color: #fff; }
-.block, .remix, .pagination, #header, #info, #notice{ margin-bottom: 10px; }
+.block, .remix, .pagination, #info, #notice{ margin: 10px 0; }
 .block, .remix, .pagination, #processing{ padding: 20px; }
 .block, .remix, #processing, .pagination, #notice{ -moz-border-radius: 5px; -webkit-border-radius: 5px; }
 .upload_button, .uploadifyProgress, .uploadifyProgressBar{ -moz-border-radius: 13px; -webkit-border-radius: 13px; } 
