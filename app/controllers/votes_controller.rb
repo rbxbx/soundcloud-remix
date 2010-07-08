@@ -28,11 +28,7 @@ class VotesController < ApplicationController
           flash[:notice] = error
           redirect_to @remix
         }
-        format.js{
-          render :update do |page|
-            page.alert error
-          end
-        }
+        format.js{ render :js => "alert('#{error}');" }
         
       end
       
