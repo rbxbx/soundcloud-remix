@@ -6,6 +6,8 @@
 
 <% if @remixes %>
 
+<% if !params[:page] %>
+
 <div class="block">
 	
 	<h2 class="fl">Listen To The Remixes</h2>
@@ -13,6 +15,12 @@
 	<div class="clear"></div>
 	
 </div>
+
+<% else %>
+
+<%= will_paginate @remixes %>
+
+<% end %>
 
 <%= render @remixes %>
 
