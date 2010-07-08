@@ -30,17 +30,12 @@ h1, h2{ color: #000; font-weight: normal; }
 	width: 650px;
 }
 
-#processing{
-	background-color: #000;
-	text-align: center;
-}
+#processing, #notice{ background-color: #000; text-align: center; }
 
 #notice{
-	background-color: #000;
 	border: 2px solid #CCC;
 	color: #FFF;
 	padding: 10px 0;
-	text-align: center;
 }
 
 .fl{ float: left; }
