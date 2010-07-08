@@ -1,7 +1,5 @@
 class Remix < ActiveRecord::Base
   
-  include ActionView::Helpers::NumberHelper
-  
   attr_accessor :file
   
   belongs_to :user
