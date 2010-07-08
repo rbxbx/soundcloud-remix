@@ -27,18 +27,8 @@
 	
 	<% end %>
 
-  <%= stylesheet_link_tag "application" %>
-	<%= stylesheet_link_tag "uploadify" -%>
-
-	<% if params[:action] == "new" %>
-
-	<%= javascript_include_tag('jquery-1.3.2.min','swfobject','jquery.uploadify.v2.1.0','application') -%>
-	
-	<% else %>
-
-	<%= javascript_include_tag :defaults %>
-	
-	<% end %>
+  <%= stylesheet_link_tag "application", "uploadify" %>
+	<%= javascript_include_tag :defaults, 'swfobject', 'jquery.uploadify.v2.1.0' %>
 
 </head>
 <body>
