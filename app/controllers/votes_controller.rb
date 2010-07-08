@@ -3,6 +3,7 @@ class VotesController < ApplicationController
   def create
     
     @remix = Remix.find(params[:id])
+    
     @vote = Vote.new(:remix_id => @remix.id, :ip_address => request.remote_ip)
 
     respond_to do |format|

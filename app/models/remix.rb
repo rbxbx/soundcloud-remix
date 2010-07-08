@@ -12,7 +12,7 @@ class Remix < ActiveRecord::Base
   @@per_page = 5
   
   def url
-    "http://api.soundcloud.com/tracks/#{track_id}&color=#{SETTINGS['player_color']}"
+    "http://api.soundcloud.com/tracks/#{track_id}&color=#{SETTINGS['player_color']}&text_buy_track=Vote For Remix"
   end
   
   def available?

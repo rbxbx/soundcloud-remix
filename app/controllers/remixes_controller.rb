@@ -21,7 +21,7 @@ class RemixesController < ApplicationController
     @remix = Remix.new(:user_id => current_user[:id])
     @remix.attributes = params[:remix]
     
-    if @remix.valid?
+    if @remix.save
     
       new_track = current_user.soundcloud.Track.new
       new_track.title = @remix.title
@@ -32,6 +32,7 @@ class RemixesController < ApplicationController
       new_track.downloadable = SETTINGS["remix"]["downloadable"]
       new_track.tag_list = SETTINGS["remix"]["tag_list"]
       new_track.track_type = "remix"
+      new_track.purchase_url = vote_url(@remix.id)
     
       if new_track.save
       
@@ -44,6 +45,10 @@ class RemixesController < ApplicationController
           format.html{ redirect_to remix_url(@remix) }
           format.js{ render :js => "top.location.href = '#{remix_path(@remix)}';" }
         end
+      
+      else
+        
+        @remix.destroy # error... track couldn't be created on soundcloud
       
       end
       
