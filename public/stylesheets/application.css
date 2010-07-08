@@ -22,22 +22,13 @@ a:hover{ text-decoration: underline; }
 
 p{ margin: 15px 0; }
 
-h1, h2{
-	color: #000;
-	font-weight: normal;
-}
+h1, h2{ color: #000; font-weight: normal; }
 
 #wrapper{
 	margin: 0 auto;
 	text-align: left;
 	width: 650px;
 }
-
-.fl{ float: left; }
-.fr{ float: right; }
-.clear{ clear: both; }
-
-.block, .remix, .pagination{ background-color: #fff; }
 
 #processing{
 	background-color: #000;
@@ -52,23 +43,31 @@ h1, h2{
 	text-align: center;
 }
 
+.fl{ float: left; }
+.fr{ float: right; }
+.clear{ clear: both; }
+
+.block, .remix, .pagination{ background-color: #fff; }
 .block, .remix, .pagination, #header, #info, #notice{ margin-bottom: 10px; }
 .block, .remix, .pagination, #processing{ padding: 20px; }
 .block, .remix, #processing, .pagination, #notice{ -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+.upload_button, .uploadifyProgress, .uploadifyProgressBar{ -moz-border-radius: 13px; -webkit-border-radius: 13px; } 
 
-.button{
+.upload_button{
 	background-color: #E3E3E3;
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#E3E3E3));
 	color: #000;
 	display: block;
 	font-size: 15px;
-	-moz-border-radius: 13px; -webkit-border-radius: 13px;
 	padding: 5px 0 6px 0;
 	text-align: center;
 	width: 175px;
 }
 
-.button:hover{ color: #b14647; text-decoration: none; }
+.upload_button:hover{
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#E3E3E3), to(white));
+	text-decoration: none;
+}
 
 .share a{
 	background: url("/images/icons.png") no-repeat;
@@ -94,7 +93,7 @@ h1, h2{
 .uploadifyError { color: red; }
 
 .uploadifyProgress {
-	background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#5C5C5C), color-stop(0.5, #747474), to(#5C5C5C)) repeat-x, #5C5C5C;
+	background-color: #EEE;
 	margin: 10px 0;
 	width: 100%;
 }
