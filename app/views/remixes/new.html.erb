@@ -11,13 +11,19 @@
 			
 		<%= f.file_field :file %>
 		
-		<p id="info"><small>Files must be smaller than <%= number_to_human_size(SETTINGS["upload_limit"], :precision => 0) -%>. OGG, MP3, AAC</small></p>
+		<p id="info">
+			
+			<small>Files must be smaller than <%= number_to_human_size(SETTINGS["upload_limit"], :precision => 0) -%>. OGG, MP3, AAC</small>
+			
+			<% if SETTINGS["terms"] %><br><br>By entering you agree to the <%= link_to "Terms and Conditions", SETTINGS["terms"], :target => "_blank" %> of <%= SETTINGS["title"] %>.<% end %>
+			
+		</p>
 		
 		<p id="upload">
 		
-		<script type="text/javascript">document.write('<%= escape_javascript(button_to_remote("Upload", {:url => start_upload_path}, {:id => "remix_submit", :disabled => "disabled"})) -%>');</script>
+			<script type="text/javascript">document.write('<%= escape_javascript(button_to_remote("Upload", {:url => start_upload_path}, {:id => "remix_submit", :disabled => "disabled"})) -%>');</script>
 		
-		<noscript><%= f.submit 'Upload' %></noscript>
+			<noscript><%= f.submit 'Upload' %></noscript>
 		
 		</p>
 
