@@ -54,7 +54,7 @@ class RemixesController < ApplicationController
       
       else
         
-        @remix.destroy # error... track couldn't be created on soundcloud
+        @remix.destroy
       
       end
       
