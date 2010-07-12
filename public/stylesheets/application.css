@@ -42,10 +42,10 @@ h1, h2{ color: #000; font-weight: normal; }
 .fr{ float: right; }
 .clear{ clear: both; }
 
-.block, .remix, .pagination{ background-color: #FFF; }
-.block, .remix, .pagination, #info, #notice, #header{ margin-bottom: 10px; }
-.block, .remix, .pagination, #processing{ padding: 20px; }
-.block, .remix, #processing, .pagination, #notice{ -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+.block, .remix{ background-color: #FFF; }
+.block, .remix, #info, #notice, #header{ margin-bottom: 10px; }
+.block, .remix, #processing{ padding: 20px; }
+.block, .remix, #processing, #notice{ -moz-border-radius: 5px; -webkit-border-radius: 5px; }
 .upload_button, .uploadifyProgress, .uploadifyProgressBar{ -moz-border-radius: 13px; -webkit-border-radius: 13px; } 
 
 /* Top Right Upload Button */

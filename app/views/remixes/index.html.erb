@@ -18,12 +18,12 @@
 
 	<% else %>
 
-		<%= will_paginate @remixes %>
+		<div class="block"><%= will_paginate @remixes, :container => false %></div>
 
 	<% end %>
 
 	<%= render @remixes %>
 
-	<%= will_paginate @remixes %>
+	<div class="block"><%= will_paginate @remixes, :container => false %></div>
 	
 <% end %>
