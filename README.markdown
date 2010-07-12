@@ -52,4 +52,11 @@ If you'd like to use the Facebook "Like" button on your application, you'll need
 
 ### CSS
 
-Location...
+You can further customize the aesthetics of your application by adjusting `public/stylesheets/application.css`. Here's a few hints on where you could start:
+
+* Change the _color_ and _font_ of text in the `body` selector
+* Change the _color_ of links and their hover effect in the `a` selector
+* Change the _color_ of headlines in the `h1, h2` selector
+* Change the _background_ gradient of the upload progress bar in the `uploadifyProgressBar` selector
+
+
