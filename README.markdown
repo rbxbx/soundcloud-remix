@@ -6,12 +6,12 @@ This app allows you to easily throw a SoundCloud Remix competition on your websi
 
 ### Register a new SoundCloud application
 
-* Make sure you're [signed up](http://soundcloud.com/signup) for SoundCloud and logged in.
-* [Go here](http://soundcloud.com/you/apps/new), name your app, and click `Register`
-* Copy your **Consumer Key** and **Consumer Secret** for later
+1. Make sure you're [signed up](http://soundcloud.com/signup) for SoundCloud and logged in.
+2. [Go here](http://soundcloud.com/you/apps/new), name your app, and click `Register`
+3. Copy your **Consumer Key** and **Consumer Secret** for later
 
 ### Create a new Group on SoundCloud
 
-* [Go here](http://soundcloud.com/groups/new) and name your group (eg. My Band's Remix Contest)
-* Add a description about your contest, make sure "Automatically approve tracks" is checked, and click `Save Group`
-* Copy your groups **url** from the address bar for later (eg. http://soundcloud.com/groups/soundcloud-remix)
+1. [Go here](http://soundcloud.com/groups/new) and name your group (eg. My Band's Remix Contest)
+2. Add a description about your contest, make sure "Automatically approve tracks" is checked, and click `Save Group`
+3. Copy your groups **url** from the address bar for later (eg. http://soundcloud.com/groups/soundcloud-remix)
