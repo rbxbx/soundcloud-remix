@@ -59,4 +59,8 @@ You can further customize the aesthetics of your application by adjusting `publi
 * Change the _color_ of headlines in the `h1, h2` selector
 * Change the _background_ gradient of the upload progress bar in the `uploadifyProgressBar` selector
 
+# Copyright
+
+**SoundCloud-Remix** is Copyright (c) 2010 [SoundCloud](http://soundcloud.com), released under the MIT License.
+
 
