@@ -20,7 +20,7 @@
 			
 			<script type="text/javascript">document.write('<%= escape_javascript(link_to_remote("Vote", :url => vote_path(remix.id))) -%>');</script>
 			
-			<noscript><%= link_to("Vote", vote_path(remix.id)) %></noscript>
+			<noscript><%= link_to "Vote", vote_path(remix.id) %></noscript>
 			
 			<% end %>
 			
