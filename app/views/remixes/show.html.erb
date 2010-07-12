@@ -2,7 +2,15 @@
 
 <div class="block">
 	
-	<div class="fl"><iframe src="http://www.facebook.com/plugins/like.php?href=<%= remix_url(@remix) -%>&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=25" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:25px;" allowTransparency="true"></iframe></div>
+	<div class="fl">
+		
+		<% if SETTINGS["facebook_id"] %>
+		
+		<iframe src="http://www.facebook.com/plugins/like.php?href=<%= remix_url(@remix) -%>&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=25" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:25px;" allowTransparency="true"></iframe>
+		
+		<% end %>
+		
+	</div>
 	
 	<div class="fr share">
 		
