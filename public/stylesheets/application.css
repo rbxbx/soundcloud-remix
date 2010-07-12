@@ -14,14 +14,14 @@ body{
 }
 
 a{
-	color: #b14647;
+	color: #06C;
 	text-decoration: none;
 }
-a:hover{ text-decoration: underline; }
+a:hover{ color: #F50; }
 
 p{ margin: 15px 0; }
 
-h1, h2{ color: #000; font-weight: normal; }
+h1, h2{ color: #06C; font-weight: normal; }
 
 /* Main Wrapper (Width of Site) */
 
@@ -82,7 +82,7 @@ h1, h2{ color: #000; font-weight: normal; }
 .uploadifyError { color: red; }
 
 .uploadifyProgressBar {
-	background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#E7AD14), color-stop(0.5, #fadb88), to(#E7AD14)) repeat-x, #E7AD14;
+	background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#d67a0b), color-stop(0.5, #da340c), to(#d67a0b)) repeat-x, #d67a0b;
 	width: 0px;
 	height: 26px;
 }
