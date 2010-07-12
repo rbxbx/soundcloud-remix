@@ -23,14 +23,18 @@ p{ margin: 15px 0; }
 
 h1, h2{ color: #000; font-weight: normal; }
 
+/* Main Wrapper (Width of Site) */
+
 #wrapper{
 	margin: 0 auto;
 	text-align: left;
 	width: 650px;
 }
 
+/* Div Blocks */
+
 .block, .remix{ background-color: #FFF; }
-.block, .remix, #info, #notice, #header{ margin-bottom: 10px; }
+.mb, .block, .remix, #notice, #header{ margin-bottom: 10px; }
 .block, .remix, #processing{ padding: 20px; }
 .block, .remix, #processing, #notice{ -moz-border-radius: 5px; -webkit-border-radius: 5px; }
 
