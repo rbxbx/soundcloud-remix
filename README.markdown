@@ -24,10 +24,20 @@ This app allows you to easily throw a SoundCloud Remix competition on your websi
 
 ### Adjust Main Settings
 
-1. Open `config/settings.yml`
-2. Input your competition **title**, **description**, and **group url**
-3. Add a link to your **terms**, if needed. Otherwise, leave blank.
-4. Customize the **player_params** as needed. You can view a full list of parameters [here](http://wiki.github.com/soundcloud/Widget-JS-API/widget-options)
-5. Set the **upload_limit** size in Kilobytes. Set to 10MBs by default for easy deployment on Heroku.
-6. Adjust the default remix **description**, **tag_list**, and **downloadable** parameters. These will be automagically applied to all remixes uploaded.
+1. Input the following into `config/settings.yml`
+2. Your competition **title**, **description**, and **group url**
+3. A link to your **terms**, if needed. Otherwise, leave blank.
+4. Customize the embedded **player_params** as needed. You can view a full list of parameters [here](http://wiki.github.com/soundcloud/Widget-JS-API/widget-options)
+5. See **Facebook Like Button** below for more information regarding **facebook_id**
+6. Set the **upload_limit** size in Kilobytes. (Set to 10MBs by default for easy deployment on Heroku.)
+7. Adjust the default remix **description**, **tag_list**, and **downloadable** parameters. These will be automagically applied to all remixes uploaded.
 
+### Facebook Like Button (optional)
+
+If you'd like to use the Facebook "Like" button on your application, you'll need to create a new Facebook App, copy its ID, and add it to your `config/settings.yml`. Here's how you do that:
+
+1. [Go here](http://www.facebook.com/developers/createapp.php), name your app, agree to the terms, and click `Create Application`
+2. Copy your **Application ID** and paste it into the **facebook_id**  field of `config/settings.yml`
+3. Back on Facebook app's edit page, click `Connect` in the left column
+4. Input the url to where your app will reside into the **Connect URL** field (eg. http://soundcloud-remix.heroku.com)
+5. Click `Save Changes`
