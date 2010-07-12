@@ -42,11 +42,13 @@ h1, h2{ color: #000; font-weight: normal; }
 .fr{ float: right; }
 .clear{ clear: both; }
 
-.block, .remix, .pagination{ background-color: #fff; }
+.block, .remix, .pagination{ background-color: #FFF; }
 .block, .remix, .pagination, #info, #notice, #header{ margin-bottom: 10px; }
 .block, .remix, .pagination, #processing{ padding: 20px; }
 .block, .remix, #processing, .pagination, #notice{ -moz-border-radius: 5px; -webkit-border-radius: 5px; }
 .upload_button, .uploadifyProgress, .uploadifyProgressBar{ -moz-border-radius: 13px; -webkit-border-radius: 13px; } 
+
+/* Top Right Upload Button */
 
 .upload_button{
 	background-color: #E3E3E3;
@@ -63,18 +65,6 @@ h1, h2{ color: #000; font-weight: normal; }
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#E3E3E3), to(white));
 	text-decoration: none;
 }
-
-.share a{
-	background: url("/images/icons.png") no-repeat;
-	display: block;
-	float: left;
-	margin-left: 2px;
-}
-
-.share a.myspace { background-position: 0 0px; }
-.share a.facebook { background-position: 0 -21px; }
-.share a.twitter { background-position: 0 -41px; }
-.share a.email { background-position: 0 -124px; }
 
 /* Upload Bar */
 
@@ -98,3 +88,17 @@ h1, h2{ color: #000; font-weight: normal; }
 	width: 0px;
 	height: 26px;
 }
+
+/* Share links on Remix Page */
+
+.share a{
+	background: url("/images/icons.png") no-repeat;
+	display: block;
+	float: left;
+	margin-left: 2px;
+}
+
+.share a.myspace { background-position: 0 0px; }
+.share a.facebook { background-position: 0 -21px; }
+.share a.twitter { background-position: 0 -41px; }
+.share a.email { background-position: 0 -124px; }
