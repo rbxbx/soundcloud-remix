@@ -1,13 +1,11 @@
-<h1>Remix "The Glow"</h1>
+<!-- Erase me and insert your own Remix instructions, including stems, deadlines, etc. -->
+
+<h1>Remix SoundCloud</h1>
 
 <p>
 
-We've made the stems from "The Glow" available below.<br>
+This is an example application showing the default configuration of SoundCloud-Remix, an app that allows you to easily throw a SoundCloud remix competition on your website.<br>
 <br>
-If you don't have any remixing software, you can use avairy.com's online remix software by clicking <a href="http://aviary.com/launch/myna?config=rjd2" target="_blank">here</a>.<br>
-<br>
-The deadline for submissions is X. [ insert this is how you win ]<br>
-<br>
-[ insert soundcloud widget ]
+For further instructions and documentation please visit <a href="http://github.com/soundcloud/soundcloud-remix">our github</a>.
 
 </p>
