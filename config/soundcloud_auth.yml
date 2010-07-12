@@ -1,0 +1,17 @@
+development:
+  key: devkey
+  secret: devsecret
+  base_url: "http://api.soundcloud.com"
+  remember_for: 1 # days
+  oauth_callback: "http://example.com:3000/oauth_callback"
+test:
+  key: testkey
+  secret: testsecret
+  base_url: "http://api.soundcloud.com"
+  remember_for: 1 # days
+  oauth_callback: "http://localhost:3000/oauth_callback"
+production:
+  key: prokey
+  secret: prosecret
+  base_url: "http://api.soundcloud.com"
+  remember_for: 1 # days
