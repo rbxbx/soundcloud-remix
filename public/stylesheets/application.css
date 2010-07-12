@@ -30,7 +30,15 @@ h1, h2{ color: #000; font-weight: normal; }
 	width: 650px;
 }
 
-#processing, #notice{ background-color: #000; text-align: center; }
+.block, .remix{ background-color: #FFF; }
+.block, .remix, #info, #notice, #header{ margin-bottom: 10px; }
+.block, .remix, #processing{ padding: 20px; }
+.block, .remix, #processing, #notice{ -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+
+#processing, #notice{
+	background-color: #000; 
+	text-align: center;
+}
 
 #notice{
 	border: 2px solid #CCC;
@@ -38,15 +46,11 @@ h1, h2{ color: #000; font-weight: normal; }
 	padding: 10px 0;
 }
 
+/* Floats & Clears */
+
 .fl{ float: left; }
 .fr{ float: right; }
 .clear{ clear: both; }
-
-.block, .remix{ background-color: #FFF; }
-.block, .remix, #info, #notice, #header{ margin-bottom: 10px; }
-.block, .remix, #processing{ padding: 20px; }
-.block, .remix, #processing, #notice{ -moz-border-radius: 5px; -webkit-border-radius: 5px; }
-.upload_button, .uploadifyProgress, .uploadifyProgressBar{ -moz-border-radius: 13px; -webkit-border-radius: 13px; } 
 
 /* Top Right Upload Button */
 
@@ -68,20 +72,11 @@ h1, h2{ color: #000; font-weight: normal; }
 
 /* Upload Bar */
 
+.upload_button, .uploadifyProgress, .uploadifyProgressBar{ -moz-border-radius: 13px; -webkit-border-radius: 13px; } 
 .uploadifyHeader, .uploadifyProgress, .uploadifyQueueItem .cancel{ display: none; }
-
-.uploadifyQueueItem {
-	margin: 10px 0;
-	width: 100%;
-}
-
+.uploadifyQueueItem, .uploadifyProgress { margin: 10px 0; width: 100%; }
+.uploadifyProgress { background-color: #EEE; }
 .uploadifyError { color: red; }
-
-.uploadifyProgress {
-	background-color: #EEE;
-	margin: 10px 0;
-	width: 100%;
-}
 
 .uploadifyProgressBar {
 	background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#E7AD14), color-stop(0.5, #fadb88), to(#E7AD14)) repeat-x, #E7AD14;
