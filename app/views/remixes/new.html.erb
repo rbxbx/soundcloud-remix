@@ -13,7 +13,7 @@
 		
 		<p id="info">
 			
-			<small>Files must be smaller than <%= number_to_human_size(SETTINGS["upload_limit"], :precision => 0) -%>. OGG, MP3, AAC</small>
+			<small>Files must be smaller than <%= number_to_human_size(SETTINGS["upload_limit"], :precision => 0) -%>. AIFF, WAVE, FLAC, OGG, MP3, AAC</small>
 			
 			<% if SETTINGS["terms"] %><br><br>By entering you agree to the <%= link_to "Terms and Conditions", SETTINGS["terms"], :target => "_blank" %> of <%= SETTINGS["title"] %>.<% end %>
 			
@@ -40,7 +40,7 @@
 		script    	: '/remixes',
 		auto     		: false,
 		fileDesc		: "Remix",
-		fileExt			: "*.mp3;*.m4a;*.ogg;*.wav",
+		fileExt			: "*.aif,*.mp3;*.m4a;*.ogg;*.wav,*.flac,*.aac",
 		sizeLimit		: <%= SETTINGS["upload_limit"] -%>,
 		buttonText	: "Choose file",
 		scriptData	: {
