@@ -3,7 +3,7 @@
 	<object height="81" width="100%"> 
 		<param name="movie" value="http://player.soundcloud.com/player.swf?url=<%= remix.url -%>"></param> 
 		<param name="allowscriptaccess" value="always"></param> 
-		<embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=<%= remix.url -%><%= if params[:action] == "show" then "&auto_play=true" end -%>" type="application/x-shockwave-flash" width="100%"></embed> 
+		<embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=<%= remix.url -%><%= "&auto_play=true" if params[:action] == "show" -%>" type="application/x-shockwave-flash" width="100%"></embed> 
 	</object>
 
 </div>
