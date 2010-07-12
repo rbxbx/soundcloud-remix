@@ -35,10 +35,10 @@ h1, h2{ color: #06C; font-weight: normal; }
 
 /* Div Blocks */
 
-.block, .remix{ background-color: #FFF; }
-.mb, .block, .remix, #notice{ margin-bottom: 10px; }
-.block, .remix, #processing{ padding: 20px; }
-.block, .remix, #processing, #notice{ -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+.block, .remix, .pagination{ background-color: #FFF; }
+.mb, .block, .pagination, .remix, #notice{ margin-bottom: 10px; }
+.block, .remix, .pagination, #processing{ padding: 20px; }
+.block, .remix, .pagination, #processing, #notice{ -moz-border-radius: 5px; -webkit-border-radius: 5px; }
 
 #processing, #notice{
 	background-color: #000; 
