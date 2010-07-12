@@ -31,10 +31,12 @@ h1, h2{ color: #06C; font-weight: normal; }
 	width: 650px;
 }
 
+#header{ margin-bottom: 20px; }
+
 /* Div Blocks */
 
 .block, .remix{ background-color: #FFF; }
-.mb, .block, .remix, #notice, #header{ margin-bottom: 10px; }
+.mb, .block, .remix, #notice{ margin-bottom: 10px; }
 .block, .remix, #processing{ padding: 20px; }
 .block, .remix, #processing, #notice{ -moz-border-radius: 5px; -webkit-border-radius: 5px; }
 
