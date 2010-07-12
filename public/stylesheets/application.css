@@ -84,7 +84,7 @@ h1, h2{ color: #06C; font-weight: normal; }
 .uploadifyError { color: red; }
 
 .uploadifyProgressBar {
-	background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#d67a0b), color-stop(0.5, #e79a52), to(#d67a0b)) repeat-x, #d67a0b;
+	background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#39F), color-stop(0.5, #74B9FF), to(#39F)) repeat-x, #39F;
 	width: 0px;
 	height: 26px;
 }
