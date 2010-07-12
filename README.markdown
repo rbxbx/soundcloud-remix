@@ -32,7 +32,7 @@ This app allows you to easily throw a SoundCloud Remix competition on your websi
 6. Set the **upload_limit** size in Kilobytes. (Set to 10MBs by default for easy deployment on Heroku.)
 7. Adjust the default remix **description**, **tag_list**, and **downloadable** parameters. These will be automagically applied to all remixes uploaded.
 
-## Facebook Like Button (optional)
+#### Facebook Like Button (optional)
 
 If you'd like to use the Facebook "Like" button on your application, you'll need to create a new Facebook App, copy its ID, and add it to your `config/settings.yml`. Here's how you do that:
 
@@ -42,4 +42,14 @@ If you'd like to use the Facebook "Like" button on your application, you'll need
 4. Input the url to where your app will reside into the **Connect URL** field (eg. http://soundcloud-remix.heroku.com)
 5. Click `Save Changes`
 
-# Customize Aesthetics and Images
+# Customize CSS and Images
+
+### Images
+
+1. BG
+2. Logo
+3. Artwork
+
+### CSS
+
+Location...
