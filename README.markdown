@@ -39,16 +39,16 @@ If you'd like to use the Facebook "Like" button on your application, you'll need
 1. [Go here](http://www.facebook.com/developers/createapp.php), name your app, agree to the terms, and click `Create Application`
 2. Copy your **Application ID** and paste it into the **facebook_id**  field of `config/settings.yml`
 3. Back on your Facebook app's edit page, click `Connect` in the left column
-4. Input the url to where your app will reside into the **Connect URL** field (eg. http://soundcloud-remix.heroku.com)
+4. Input the url to where your deployed app will reside into the **Connect URL** field (eg. http://soundcloud-remix.heroku.com)
 5. Click `Save Changes`
 
 # Customize CSS and Images
 
 ### Images
 
-* `publics/images/bg.jpg`: background image used throughout the app. Replace with something around _1280 x 960_ pixels
-* `publics/images/logo.png`: logo that appears in the top left corner of your app. Replace with another _transparent png_ of your choosing.
-* `publics/images/artwork.jpg`: a square _200 x 200_ pixel image that is applied to every remix upload.
+* `public/images/bg.jpg`: background image used throughout the app. Replace with something around _1280 x 960_ pixels
+* `public/images/logo.png`: logo that appears in the top left corner of your app. Replace with another _transparent png_ of your choosing.
+* `public/images/artwork.jpg`: a square _200 x 200_ pixel image that is applied to every remix upload.
 
 ### CSS
 
