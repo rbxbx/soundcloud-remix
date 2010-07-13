@@ -18,6 +18,14 @@ This app allows you to easily throw a SoundCloud Remix competition on your websi
 
 # Configuration
 
+### Download the App
+
+Clone the application on your local computer:
+
+> git clone git@github.com:soundcloud/soundcloud-remix.git my-remix-title
+
+Or you can [download](http://github.com/soundcloud/soundcloud-remix/archives/master) the source.
+
 ### Connect with your SoundCloud app
 
 1. Input your **Consumer Key** and **Consumer Secret** to the prokey and prosecret fields at the bottom of `config/soundcloud_auth.yml`
