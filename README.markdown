@@ -24,14 +24,18 @@ Install Git: [On a Mac](http://github.com/guides/get-git-on-mac), [Windows](http
 
 # Download
 
-Clone the application on your local computer:
+Clone the application on your local computer by running the following command in your Terminal emulator. (Terminal on Mac, Console on Windows)
 
-     git clone git@github.com:soundcloud/soundcloud-remix.git
+     $ git clone git@github.com:soundcloud/soundcloud-remix.git
+     $ cd soundcloud-remix
 
+Now you're ready to configure it!
 
 # Configuration
 
-Configuring the application is simply done by editing the following files: `config/soundcloud_auth.yml` `config/settings.yml` `config/instructions.txt` If you're looking for a decent text editor, try [TextMate](http://macromates.com/)
+Configuring the application is simply done by editing the following files `soundcloud_auth.yml` `settings.yml` `instructions.txt` in the **config** folder.
+
+If you're looking for a decent text editor, try [TextMate](http://macromates.com/)
 
 ### Connect with your SoundCloud app
 
