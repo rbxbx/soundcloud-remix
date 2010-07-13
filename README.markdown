@@ -35,7 +35,7 @@ Input your **Consumer Key** and **Consumer Secret** to the prokey and prosecret 
 1. Input the following into `config/settings.yml`
 2. Your competition **title**, **description**, and **group url**
 3. A link to your **terms**, if needed. Otherwise, leave blank.
-4. Customize the embedded **player_params** as needed. You can view a full list of parameters [here](http://wiki.github.com/soundcloud/Widget-JS-API/widget-options)
+4. Customize the embedded **player_params** as needed. (You can view a full list of parameters [here](http://wiki.github.com/soundcloud/Widget-JS-API/widget-options))
 5. See *Facebook Like Button* below for more information regarding **facebook_id**
 6. Set the **upload_limit** size in Kilobytes. (Set to 10MBs by default for easy deployment on Heroku.)
 7. Adjust the default remix **description**, **tag_list**, and **downloadable** parameters. (These will be automagically applied to all remixes uploaded.)
