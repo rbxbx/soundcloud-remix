@@ -22,9 +22,9 @@ This app allows you to easily throw a SoundCloud Remix competition on your websi
 
 Clone the application on your local computer:
 
-> git clone git@github.com:soundcloud/soundcloud-remix.git my-remix-title
+     git clone git@github.com:soundcloud/soundcloud-remix.git remix-contest-title
 
-Or you can [download](http://github.com/soundcloud/soundcloud-remix/archives/master) the source.
+Or [download](http://github.com/soundcloud/soundcloud-remix/archives/master) the source and extract it.
 
 ### Connect with your SoundCloud app
 
