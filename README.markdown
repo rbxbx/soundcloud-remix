@@ -40,6 +40,10 @@ Input your **Consumer Key** and **Consumer Secret** to the prokey and prosecret 
 6. Set the **upload_limit** size in Kilobytes. (Set to 10MBs by default for easy deployment on Heroku.)
 7. Adjust the default remix **description**, **tag_list**, and **downloadable** parameters. (These will be automagically applied to all remixes uploaded.)
 
+### Add some Instructions
+
+The frontpage includes a prominent block that should be used to instruct your users on the contest rules, submission guidelines, deadlines, where to get the stems, etc. You have complete control over this block by simply editing `config/instructions.txt`
+
 ### Facebook Like Button (optional)
 
 If you'd like to use the Facebook "Like" button on your application, you'll need to create a new Facebook App, copy its ID, and add it to your `config/settings.yml`. Here's how you do that:
