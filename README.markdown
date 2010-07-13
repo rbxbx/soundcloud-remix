@@ -80,6 +80,7 @@ Deployment instructions coming soon :)
 # Tips and Tricks
 
 * Add **.vote** to the end of any remix link to make a voting link. Great for Twitter. "Vote for my remix http://soundcloud-remix.heroku.com/1**.vote**"
+* Remixes are automatically added to the Group you specified in settings. You can go there to grab an embed of all your submissions.
 
 # Copyright
 
