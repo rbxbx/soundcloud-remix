@@ -4,7 +4,7 @@ This app allows you to easily throw a SoundCloud Remix competition on your websi
 
 # Prerequisites
 
-### Install Ruby, RubyGems, & Rails
+### 1. Install Ruby, RubyGems, & Rails
 
 #### On Mac OS X
 
@@ -14,19 +14,19 @@ Ruby and Rails comes pre-installed on Mac OS X, but you'll want to upgrade it by
 
 [Follow these instructions](http://wiki.rubyonrails.org/getting-started/installation/windows) to install Ruby and Rails on Windows.
 
-### Install Git
+### 2. Install Git
 
 [Git](http://git-scm.com/) is a free & open source, distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
 Install Git: [On a Mac](http://github.com/guides/get-git-on-mac), [Windows](http://code.google.com/p/msysgit/), or [UNIX/Linux](http://book.git-scm.com/2_installing_git.html) 
 
-### Register a new SoundCloud application
+### 3. Register a new SoundCloud application
 
 1. Make sure you're [signed up](http://soundcloud.com/signup) for SoundCloud and logged in.
 2. [Go here](http://soundcloud.com/you/apps/new), name your app, and click `Register`
 3. Copy your **Consumer Key** and **Consumer Secret** for later
 
-### Create a new Group on SoundCloud
+### 4. Create a new Group on SoundCloud
 
 1. [Go here](http://soundcloud.com/groups/new) and name your group (eg. My Band's Remix Contest)
 2. Add a description about your contest, make sure "Automatically approve tracks" is checked, and click `Save Group`
@@ -47,11 +47,11 @@ Configuring the application is simply done by editing the following files `sound
 
 If you're looking for a decent text editor, try [TextMate](http://macromates.com/)
 
-### Connect with your SoundCloud app
+### 1. Connect with your SoundCloud app
 
 Input your **Consumer Key** and **Consumer Secret** to the prokey and prosecret fields at the bottom of `config/soundcloud_auth.yml`
 
-### Adjust Main Settings
+### 2. Adjust Main Settings
 
 1. Input the following into `config/settings.yml`
 2. Your competition **title**, **description**, and **group url**
@@ -61,11 +61,11 @@ Input your **Consumer Key** and **Consumer Secret** to the prokey and prosecret 
 6. Set the **upload_limit** size in Kilobytes. (Set to 10MBs by default for easy deployment on Heroku.)
 7. Adjust the default remix **description**, **tag_list**, and **downloadable** parameters. (These will be automagically applied to all remixes uploaded.)
 
-### Add Some Instructions
+### 3. Add Some Instructions
 
 The frontpage includes a prominent block that should be used to instruct your users on the contest rules, submission guidelines, deadlines, where to get the stems, etc. You have complete control over this block by simply editing `config/instructions.txt`
 
-### Facebook Like Button (optional)
+### 4. Facebook Like Button (optional)
 
 If you'd like to use the Facebook "Like" button on your application, you'll need to create a new Facebook App, copy its ID, and add it to your `config/settings.yml`. Here's how you do that:
 
