@@ -28,7 +28,10 @@ Clone the application on your local computer:
 
      git clone git@github.com:soundcloud/soundcloud-remix.git
 
+
 # Configuration
+
+Configuring the application is simply done by editing the following files: `config/soundcloud_auth.yml` `config/settings.yml` `config/instructions.txt` If you're looking for a decent text editor, try [TextMate](http://macromates.com/)
 
 ### Connect with your SoundCloud app
 
