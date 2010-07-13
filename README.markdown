@@ -75,7 +75,7 @@ Deployment instructions coming soon :)
 
 # Tips and Tricks
 
-Coming soon ;)
+Tips and Tricks coming soon ;)
 
 # Copyright
 
