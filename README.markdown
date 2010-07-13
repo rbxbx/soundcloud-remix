@@ -2,7 +2,11 @@
 
 This app allows you to easily throw a SoundCloud Remix competition on your website. The default application has plenty of customization options but feel free to adjust and fork as needed. You can see an example of the default app running [here](http://soundcloud-remix.heroku.com/).
 
-# Setup
+# Prerequisites
+
+### Install Git
+
+**Install Git:** [On a Mac](http://github.com/guides/get-git-on-mac), [Windows](http://code.google.com/p/msysgit/), or [UNIX/Linux](http://book.git-scm.com/2_installing_git.html) 
 
 ### Register a new SoundCloud application
 
@@ -21,8 +25,6 @@ This app allows you to easily throw a SoundCloud Remix competition on your websi
 Clone the application on your local computer:
 
      git clone git@github.com:soundcloud/soundcloud-remix.git
-
-Or [download](http://github.com/soundcloud/soundcloud-remix/archives/master) the source and extract it.
 
 # Configuration
 
@@ -81,7 +83,7 @@ Deployment instructions coming soon :)
 
 * Add **.vote** to the end of any remix link to make a voting link. Great for Twitter. "Vote for my remix http://soundcloud-remix.heroku.com/1**.vote**"
 * Remixes are automatically added to the Group you specified in settings. You can go there to grab an embed of all the submissions.
-* A button to "Vote For Remix" is added to the player embed via a customized 'buy' button. More on that trick [here](http://blog.soundcloud.com/2010/06/25/buy-download-button/).
+* A button to "Vote For Remix" is added to the player embed via a customized 'buy' button. More on that hack [here](http://blog.soundcloud.com/2010/06/25/buy-download-button/).
 
 # Copyright
 
