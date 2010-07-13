@@ -6,13 +6,9 @@ This app allows you to easily throw a SoundCloud Remix competition on your websi
 
 ### 1. Install Ruby, RubyGems, & Rails
 
-#### On Mac OS X
+**On Mac OS X:** Ruby and Rails comes pre-installed on Mac OS X, but you'll want to upgrade it by [following these instructions](http://developer.apple.com/Tools/developonrailsleopard.html).
 
-Ruby and Rails comes pre-installed on Mac OS X, but you'll want to upgrade it by [following these instructions](http://developer.apple.com/Tools/developonrailsleopard.html).
-
-#### On Windows
-
-[Follow these instructions](http://wiki.rubyonrails.org/getting-started/installation/windows) to install Ruby and Rails on Windows.
+**On Windows:** [Follow these instructions](http://wiki.rubyonrails.org/getting-started/installation/windows) to install Ruby and Rails on Windows.
 
 ### 2. Install Git
 
@@ -99,6 +95,8 @@ You can further customize the aesthetics of your application by adjusting `publi
 ### Deploying on Heroku
 
 1. [Create a Heroku Account](http://heroku.com/signup)
+2. [Install the Heroku Gem](http://docs.heroku.com/heroku-command)
+3. And finally, [deploy it to Heroku](http://docs.heroku.com/quickstart#getting-your-app-on-heroku)
 
 # Tips and Tricks
 
