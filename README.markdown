@@ -33,7 +33,6 @@ Install Git: [On a Mac](http://github.com/guides/get-git-on-mac), [Windows](http
 Clone the application on your local computer by running the following command in your Terminal emulator. (Terminal on Mac, Console on Windows)
 
      git clone git@github.com:soundcloud/soundcloud-remix.git
-     cd soundcloud-remix
 
 Now you're ready to do some configuring.
 
