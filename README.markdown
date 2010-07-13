@@ -2,7 +2,7 @@
 
 This app allows you to easily throw a SoundCloud Remix competition on your website. The default application has plenty of customization options but feel free to adjust and fork as needed. You can see an example of the default app running [here](http://soundcloud-remix.heroku.com/).
 
-# Pre-Setup
+# Setup
 
 ### Register a new SoundCloud application
 
@@ -40,7 +40,7 @@ Input your **Consumer Key** and **Consumer Secret** to the prokey and prosecret 
 6. Set the **upload_limit** size in Kilobytes. (Set to 10MBs by default for easy deployment on Heroku.)
 7. Adjust the default remix **description**, **tag_list**, and **downloadable** parameters. (These will be automagically applied to all remixes uploaded.)
 
-### Add some Instructions
+### Add Some Instructions
 
 The frontpage includes a prominent block that should be used to instruct your users on the contest rules, submission guidelines, deadlines, where to get the stems, etc. You have complete control over this block by simply editing `config/instructions.txt`
 
@@ -79,7 +79,7 @@ Deployment instructions coming soon :)
 
 # Tips and Tricks
 
-Tips and Tricks coming soon ;)
+* Add **.vote** to the end of any remix link to make a voting link. Great for Twitter. "Vote for my remix http://soundcloud-remix.heroku.com/1**.vote**"
 
 # Copyright
 
