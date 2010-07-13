@@ -4,6 +4,16 @@ This app allows you to easily throw a SoundCloud Remix competition on your websi
 
 # Prerequisites
 
+### Install Ruby, RubyGems, & Rails
+
+#### On Mac OS X
+
+Ruby and Rails comes pre-installed on Mac OS X, but you'll want to upgrade it by [following these instructions](http://developer.apple.com/Tools/developonrailsleopard.html).
+
+#### On Windows
+
+[Follow these instructions](http://wiki.rubyonrails.org/getting-started/installation/windows) to install Ruby and Rails on Windows.
+
 ### Install Git
 
 [Git](http://git-scm.com/) is a free & open source, distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
@@ -26,10 +36,10 @@ Install Git: [On a Mac](http://github.com/guides/get-git-on-mac), [Windows](http
 
 Clone the application on your local computer by running the following command in your Terminal emulator. (Terminal on Mac, Console on Windows)
 
-     $ git clone git@github.com:soundcloud/soundcloud-remix.git
-     $ cd soundcloud-remix
+     git clone git@github.com:soundcloud/soundcloud-remix.git
+     cd soundcloud-remix
 
-Now you're ready to configure it!
+Now you're ready to do some configuring.
 
 # Configuration
 
@@ -86,7 +96,9 @@ You can further customize the aesthetics of your application by adjusting `publi
 
 # Deployment
 
-Deployment instructions coming soon :)
+### Deploying on Heroku
+
+1. [Create a Heroku Account](http://heroku.com/signup)
 
 # Tips and Tricks
 
