@@ -20,7 +20,7 @@ This app allows you to easily throw a SoundCloud Remix competition on your websi
 
 Clone the application on your local computer:
 
-     git clone git@github.com:soundcloud/soundcloud-remix.git **remix-contest-title**
+     git clone git@github.com:soundcloud/soundcloud-remix.git remix-contest-title
 
 Or [download](http://github.com/soundcloud/soundcloud-remix/archives/master) the source and extract it.
 
@@ -28,7 +28,7 @@ Or [download](http://github.com/soundcloud/soundcloud-remix/archives/master) the
 
 ### Connect with your SoundCloud app
 
-1. Input your **Consumer Key** and **Consumer Secret** to the prokey and prosecret fields at the bottom of `config/soundcloud_auth.yml`
+Input your **Consumer Key** and **Consumer Secret** to the prokey and prosecret fields at the bottom of `config/soundcloud_auth.yml`
 
 ### Adjust Main Settings
 
@@ -68,6 +68,10 @@ You can further customize the aesthetics of your application by adjusting `publi
 * Change the _color_ of links and their hover effect in the `a` selector
 * Change the _color_ of headlines in the `h1, h2` selector
 * Change the _background_ gradient of the upload progress bar in the `uploadifyProgressBar` selector
+
+# Deployment
+
+Deployment instructions coming soon :)
 
 # Copyright
 
