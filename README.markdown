@@ -44,15 +44,17 @@ If you'd like to use the Facebook "Like" button on your application, you'll need
 
 # Customize CSS and Images
 
-### Images
+### Replace default images
+
+Replace the following images with something that relates to your competition.
 
 * `public/images/bg.jpg`: background image used throughout the app. Replace with something around _1280 x 960_ pixels
 * `public/images/logo.png`: logo that appears in the top left corner of your app. Replace with another _transparent png_ of your choosing.
 * `public/images/artwork.jpg`: a square _200 x 200_ pixel image that is applied to every remix upload.
 
-### CSS
+### Adjust default CSS
 
-You can further customize the aesthetics of your application by adjusting `public/stylesheets/application.css`. Here's a few hints on where you could start:
+You can further customize the aesthetics of your application by adjusting `public/stylesheets/application.css`. Here's a few ideas:
 
 * Change the _color_ and _font_ of text in the `body` selector
 * Change the _color_ of links and their hover effect in the `a` selector
