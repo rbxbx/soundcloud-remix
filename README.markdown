@@ -79,6 +79,6 @@ Tips and Tricks coming soon ;)
 
 # Copyright
 
-**SoundCloud-Remix** is Copyright (c) 2010 [SoundCloud](http://soundcloud.com), released under the MIT License.
+**SoundCloud-Remix** is Copyright (c) 2010 [Lee Martin](http://Lee.Ma/rtin) and [SoundCloud](http://soundcloud.com), released under the MIT License.
 
 
