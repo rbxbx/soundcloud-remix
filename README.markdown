@@ -6,9 +6,9 @@ This app allows you to easily throw a SoundCloud Remix competition on your websi
 
 ### 1. Install Ruby, RubyGems, & Rails
 
-**On Mac OS X:** Ruby and Rails comes pre-installed on Mac OS X, but you'll want to upgrade it by [following these instructions](http://developer.apple.com/Tools/developonrailsleopard.html).
+Mac OS X: Ruby and Rails comes pre-installed on Mac OS X, but you'll want to upgrade it by [following these instructions](http://developer.apple.com/Tools/developonrailsleopard.html).
 
-**On Windows:** [Follow these instructions](http://wiki.rubyonrails.org/getting-started/installation/windows) to install Ruby and Rails on Windows.
+Windows: [Follow these instructions](http://wiki.rubyonrails.org/getting-started/installation/windows) to install Ruby and Rails on Windows.
 
 ### 2. Install Git
 
