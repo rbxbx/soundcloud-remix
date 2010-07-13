@@ -73,6 +73,10 @@ You can further customize the aesthetics of your application by adjusting `publi
 
 Deployment instructions coming soon :)
 
+# Tips and Tricks
+
+Coming soon ;)
+
 # Copyright
 
 **SoundCloud-Remix** is Copyright (c) 2010 [SoundCloud](http://soundcloud.com), released under the MIT License.
