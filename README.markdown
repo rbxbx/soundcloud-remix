@@ -16,15 +16,15 @@ This app allows you to easily throw a SoundCloud Remix competition on your websi
 2. Add a description about your contest, make sure "Automatically approve tracks" is checked, and click `Save Group`
 3. Copy your **group url** from the address bar for later (eg. http://soundcloud.com/groups/soundcloud-remix)
 
-# Configuration
-
-### Download the App
+# Download
 
 Clone the application on your local computer:
 
-     git clone git@github.com:soundcloud/soundcloud-remix.git remix-contest-title
+     git clone git@github.com:soundcloud/soundcloud-remix.git **remix-contest-title**
 
 Or [download](http://github.com/soundcloud/soundcloud-remix/archives/master) the source and extract it.
+
+# Configuration
 
 ### Connect with your SoundCloud app
 
