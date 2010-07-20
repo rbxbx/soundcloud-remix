@@ -19,7 +19,8 @@
 			
 			<small>Files must be smaller than <%= number_to_human_size(SETTINGS["upload_limit"], :precision => 0) -%>.</small>
 			
-			<% if SETTINGS["terms"] %><br><br>By entering you agree to the <%= link_to "Terms and Conditions", SETTINGS["terms"], :target => "_blank" %> of <%= SETTINGS["title"] %>.<% end %>
+			<% if SETTINGS["terms"] %><br><br>By uploading you agree to the <%= link_to "Terms and Conditions", SETTINGS["terms"], :target => "_blank" %> of <%= SETTINGS["title"] %>.<% end %>
+			<% if SETTINGS["remix"]["license"] %><br><br>By uploading you agree to license your remix under <% link_to SETTINGS["remix"]["license"], "http://wiki.github.com/soundcloud/api/11-licenses" %><% end %>
 			
 		</p>
 		

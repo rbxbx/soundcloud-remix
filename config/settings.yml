@@ -35,3 +35,7 @@ remix:
   
   # Should the remix be downloadable? true or false
   downloadable: false
+  
+  # License attributed to remix, if needed. Leave blank, otherwise
+  # You can view a full list of licenses (use Value) here: http://wiki.github.com/soundcloud/api/11-licenses
+  license: 

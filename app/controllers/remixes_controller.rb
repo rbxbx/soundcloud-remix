@@ -39,6 +39,8 @@ class RemixesController < ApplicationController
       new_track.tag_list = SETTINGS["remix"]["tag_list"]
       new_track.track_type = "remix"
       new_track.purchase_url = vote_url(@remix.id)
+      
+      new_track.license = SETTINGS["remix"]["license"] if SETTINGS["remix"]["license"]
     
       if new_track.save
       
