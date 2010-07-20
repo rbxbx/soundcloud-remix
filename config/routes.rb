@@ -14,6 +14,8 @@ ActionController::Routing::Routes.draw do |map|
   
   map.remix ':id.:format', :controller => 'remixes', :action => 'show', :requirements => {:id => /\d{1,6}/}
   
+  map.remixes 'remixes', :controller => 'remixes', :action => 'create', :conditions => {:method => :post}
+  
   map.root :controller => "remixes"
   
 end
