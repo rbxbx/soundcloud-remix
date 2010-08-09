@@ -9,7 +9,7 @@ terms:
 
 # Group on SoundCloud where remixes will be added 
 # You can start a new group here: http://soundcloud.com/groups/new
-group: http://soundcloud.com/groups/soundcloud-remix
+group: 
 
 # These options customize certain aspects of the embedded SoundCloud players.
 # You can view a full list of available parameters here: http://wiki.github.com/soundcloud/Widget-JS-API/widget-options
