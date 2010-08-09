@@ -7,7 +7,10 @@ description: SoundCloud remix contest. Submit your remix and vote on other remix
 # A link to your Terms, if needed. Leave blank, otherwise
 terms: 
 
-# Group on SoundCloud where remixes will be added 
+# URL to user on SoundCloud that will administer the remix app, e.g. http://soundcloud.com/leemartin
+admin: 
+
+# URL to group on SoundCloud where remixes will be added, e.g. http://soundcloud.com/groups/soundcloud-remix
 # You can start a new group here: http://soundcloud.com/groups/new
 group: 
 

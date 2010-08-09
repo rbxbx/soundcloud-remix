@@ -10,4 +10,8 @@ class User < SoundcloudAuth::GenericUser
     remix.user_id == id ? true : false
   end
   
+  def admin?
+    SETTINGS["admin_id"].to_s == soundcloud_id ? true : false
+  end
+  
 end

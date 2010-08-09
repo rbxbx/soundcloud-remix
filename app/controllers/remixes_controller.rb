@@ -72,8 +72,12 @@ class RemixesController < ApplicationController
     
     flash[:notice] = "Your track was successfully deleted."
     
-    @remix = Remix.find(:first, :conditions => {:id => params[:id], :user_id => current_user[:id]})
-    @remix.destroy
+    @remix = Remix.find(params[:id])
+    
+    if current_user.uploaded(@remix) || current_user.admin?
+      @remix.destroy
+    end
+    
     redirect_to(remixes_url)
     
   end
