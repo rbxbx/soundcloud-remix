@@ -12,6 +12,8 @@ ActionController::Routing::Routes.draw do |map|
   
   map.status ':id/status', :controller => 'remixes', :action => 'status'
   
+  map.connect ':id.:format', :controller => 'remixes', :action => 'destroy', :conditions => {:method => :delete}
+  
   map.remix ':id.:format', :controller => 'remixes', :action => 'show', :requirements => {:id => /\d{1,6}/}
   
   map.remixes 'remixes', :controller => 'remixes', :action => 'create', :conditions => {:method => :post}
