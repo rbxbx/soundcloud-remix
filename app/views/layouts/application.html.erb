@@ -38,7 +38,13 @@
 		<table cellspacing="0" cellpadding="0" border="0" width="100%" id="header">
 			<tr valign="bottom">
 				<td><%= link_to image_tag("logo.png", :border => 0, :alt => SETTINGS["title"]), root_path -%></td>
-				<td align="right"><%= link_to 'Upload Your Remix', upload_path, :class => "upload_button" %></td>
+				<td align="right">
+					<% if logged_in? %>
+						<%= link_to 'Upload Your Remix', upload_path, :class => "upload_button" %>
+					<% else %>
+						<%= link_to 'Login to Upload', login_path, :class => "upload_button" %>
+					<% end %>
+				</td>
 			</tr>
 		</table>
 
