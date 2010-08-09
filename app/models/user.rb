@@ -7,11 +7,11 @@ class User < SoundcloudAuth::GenericUser
   end
   
   def uploaded(remix)
-    remix.user_id == id ? true : false
+    remix.user_id == id
   end
   
   def admin?
-    SETTINGS["admin_id"].to_s == soundcloud_id ? true : false
+    SETTINGS["admin_id"].to_s == soundcloud_id
   end
   
 end
