@@ -6,4 +6,8 @@ class User < SoundcloudAuth::GenericUser
     full_name.empty? ? username : full_name
   end
   
+  def uploaded(remix)
+    remix.user_id == id ? true : false
+  end
+  
 end
