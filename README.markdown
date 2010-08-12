@@ -15,7 +15,7 @@ Windows: [Follow these instructions](http://wiki.rubyonrails.org/getting-started
 [Git](http://git-scm.com/) is a free & open source, distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
 1. Install Git: [On a Mac](http://github.com/guides/get-git-on-mac), [Windows](http://code.google.com/p/msysgit/), or [UNIX/Linux](http://book.git-scm.com/2_installing_git.html) 
-2. [Generate SSH keys](http://help.github.com/mac-key-setup/)
+2. [Generate SSH key](http://help.github.com/mac-key-setup/)
 
 ### 3. Register a new SoundCloud application
 
