@@ -10,11 +10,12 @@ Mac OS X: Ruby and Rails comes pre-installed on Mac OS X, but you'll want to upg
 
 Windows: [Follow these instructions](http://wiki.rubyonrails.org/getting-started/installation/windows) to install Ruby and Rails on Windows.
 
-### 2. Install Git
+### 2. Install Git & Generate SSH Key
 
 [Git](http://git-scm.com/) is a free & open source, distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
-Install Git: [On a Mac](http://github.com/guides/get-git-on-mac), [Windows](http://code.google.com/p/msysgit/), or [UNIX/Linux](http://book.git-scm.com/2_installing_git.html) 
+1. Install Git: [On a Mac](http://github.com/guides/get-git-on-mac), [Windows](http://code.google.com/p/msysgit/), or [UNIX/Linux](http://book.git-scm.com/2_installing_git.html) 
+2. [Generate SSH keys](http://help.github.com/mac-key-setup/)
 
 ### 3. Register a new SoundCloud application
 
