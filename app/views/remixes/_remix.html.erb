@@ -9,7 +9,7 @@
 			<h2><%= link_to remix.title, remix -%></h2>
 
 			Uploaded by <%= link_to remix.user.name, remix.user.permalink_url, :target => "_blank" -%> <%= time_ago_in_words remix.created_at -%> ago
-			
+				
 			<% if logged_in? %>
 				<% if current_user.uploaded(remix) || current_user.admin? %>
 					- <%= link_to 'Delete', remix, :confirm => 'Are you sure?', :method => :delete %>
@@ -46,9 +46,7 @@
 
 		<div id="processing">
 			
-			<script type="text/javascript">check_var = true;</script>
-			
-			<%= periodically_call_remote(:url => status_path(remix.id), :condition => "check_var == true", :frequency => '15') -%>
+			<%= periodically_call_remote(:url => status_path(remix.id), :frequency => '15') -%>
 
 			Processing<br><%= image_tag "throbber.gif" %>
 

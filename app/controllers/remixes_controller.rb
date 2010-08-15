@@ -1,12 +1,13 @@
 class RemixesController < ApplicationController
 
-  before_filter :login_required, :except => [:index, :show]
+  before_filter :login_required, :only => [:new]
 
   def index
     @remixes = Remix.paginate :page => params[:page], :order => params[:sort] || "created_at DESC"
   end
 
   def show
+    
     @remix = Remix.find(params[:id])
     @page_title = "#{@remix.user.name} - #{@remix.title}"
     
@@ -18,8 +19,10 @@ class RemixesController < ApplicationController
   end
 
   def new
+    
     @remix = Remix.new
     @page_title = "Upload Your Remix"
+    
   end
 
   def create
@@ -39,8 +42,6 @@ class RemixesController < ApplicationController
       new_track.tag_list = SETTINGS["remix"]["tag_list"]
       new_track.track_type = "remix"
       new_track.purchase_url = vote_url(@remix.id)
-      
-      new_track.license = SETTINGS["remix"]["license"] if SETTINGS["remix"]["license"]
     
       if new_track.save
       
@@ -91,11 +92,8 @@ class RemixesController < ApplicationController
     remix = Remix.find(params[:id])
     
     if remix.available?
-    
-      render :update do |page|
-        page << "check_var = false;"
-        page.replace_html 'processor', :partial => "player", :locals => {:remix => remix}
-      end
+      
+      render :js => "top.location.href = '#{remix_path(remix)}';"
     
     else
       

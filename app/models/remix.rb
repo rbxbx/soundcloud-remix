@@ -12,7 +12,7 @@ class Remix < ActiveRecord::Base
   @@per_page = 5
   
   def url
-    "http://api.soundcloud.com/tracks/#{track_id}#{SETTINGS['player_params']}"
+    "http://api.soundcloud.com/tracks/#{track_id}"
   end
   
   def available?

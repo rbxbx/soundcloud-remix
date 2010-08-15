@@ -1,6 +1,6 @@
 <meta content="<%= remix.title -%> by <%= remix.user.name -%>" name="title" /> 
 <meta content="video" name="medium" /> 
-<link href="http://player.soundcloud.com/player.swf?url=<%= remix.url -%>" rel="video_src" /> 
+<link href="http://player.soundcloud.com/player.swf?url=<%= remix.url -%><%= SETTINGS['player_params'] -%>" rel="video_src" /> 
 <meta content="81" name="video_height" /> 
 <meta content="300" name="video_width" /> 
 <meta content="application/x-shockwave-flash" name="video_type" /> 
