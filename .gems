@@ -2,4 +2,4 @@ rails -v 2.3.5
 soundcloud-auth
 httparty
 will_paginate
-multipart-post
+jwagener-multipart-post
