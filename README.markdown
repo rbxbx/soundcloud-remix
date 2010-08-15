@@ -112,6 +112,7 @@ We've changed all players on the remix app from Flash to Javascript so they load
 * Add **.vote** to the end of any remix link to make a voting link. Great for Twitter. "Vote for my remix http://soundcloud-remix.heroku.com/1**.vote**"
 * Remixes are automatically added to the Group you specified in settings. You can go there to grab an embed of all the submissions.
 * A button to "Vote For Remix" is added to the player embed via a customized 'buy' button. More on that hack [here](http://blog.soundcloud.com/2010/06/25/buy-download-button/).
+* The app is automagically formatted for the iPhone. You can even listen to the remixes via HTML5 powered audio.
 
 # Copyright
 
