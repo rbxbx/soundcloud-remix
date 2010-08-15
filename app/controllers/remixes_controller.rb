@@ -1,5 +1,6 @@
 class RemixesController < ApplicationController
 
+  before_filter :check_iphone, :only => [:show, :index]
   before_filter :login_required, :only => [:new]
 
   def index
@@ -14,6 +15,7 @@ class RemixesController < ApplicationController
     respond_to do |format|
       format.html
       format.vote{ redirect_to vote_url(@remix.id) }
+      format.iphone
     end
     
   end

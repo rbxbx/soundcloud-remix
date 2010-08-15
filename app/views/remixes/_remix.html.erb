@@ -8,7 +8,7 @@
 
 			<h2><%= link_to remix.title, remix -%></h2>
 
-			Uploaded by <%= link_to remix.user.name, remix.user.permalink_url, :target => "_blank" -%> <%= time_ago_in_words remix.created_at -%> ago
+			Uploaded by <%= link_to remix.user.name, remix.user.permalink_url, :target => "_blank" -%>
 				
 			<% if logged_in? %>
 				<% if current_user.uploaded(remix) || current_user.admin? %>
@@ -56,7 +56,11 @@
 		
 	<% else %>
 
-	<%= render :partial => "player", :locals => {:remix => remix} -%>
+	<div class="player">
+
+		<%= link_to remix.title, remix.url, :class => "sc-player" -%>
+
+	</div>
 
 	<% end %>
 
