@@ -52,7 +52,7 @@ Input your **Consumer Key** and **Consumer Secret** to the prokey and prosecret 
 ### 2. Adjust Main Settings
 
 1. Input the following into `config/settings.yml`
-2. Your competition **title**, **description**, and **group url**
+2. Your competition **title**, **description**, **admin** user url, and **group** url
 3. A link to your **terms**, if needed. Otherwise, leave blank.
 4. Customize the embedded **player_params** as needed. (You can view a full list of parameters [here](http://wiki.github.com/soundcloud/Widget-JS-API/widget-options))
 5. See *Facebook Like Button* below for more information regarding **facebook_id**
