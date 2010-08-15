@@ -92,6 +92,13 @@ You can further customize the aesthetics of your application by adjusting `publi
 * Change the _color_ of headlines in the `h1, h2` selector
 * Change the _background_ gradient of the upload progress bar in the `uploadifyProgressBar` selector
 
+### Adjust player CSS
+
+We've changed all players on the remix app from Flash to Javascript so they load faster and work on the iPhone/iPad. You can adjust their aesthetics by editing `public/stylesheets/player.css`.
+
+* Change the _background-color_ in the `sc-controls` selector to adjust the color of the play/pause button
+* Change the _background_ gradient in the `sc-played` selector to adjust the play bar color
+
 # Deployment
 
 ### Deploying on Heroku
